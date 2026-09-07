@@ -1,0 +1,1846 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>CUTFRAME | High-Performance Short-Form & UGC Video Editing for DTC Brands & Creators</title>
+  <meta name="description" content="Hook-driven UGC, viral short-form pacing, and brand creatives engineered specifically for high-conversion performance on TikTok, IG Reels, and YouTube Shorts. 48hr first cut delivery.">
+  
+  <!-- Favicon / Meta -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c3f400'><path d='M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z'/></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary": "#ffffff",
+            "on-secondary": "#003911",
+            "error": "#ffb4ab",
+            "surface-container-low": "#1c1b1d",
+            "surface-container-highest": "#353437",
+            "on-error": "#690005",
+            "surface": "#131315",
+            "on-error-container": "#ffdad6",
+            "inverse-on-surface": "#313032",
+            "surface-variant": "#353437",
+            "tertiary-container": "#e3e1ee",
+            "secondary-container": "#00fe66",
+            "outline": "#8e9379",
+            "on-primary-fixed": "#161e00",
+            "background": "#0e0e10",
+            "inverse-surface": "#e5e1e4",
+            "secondary": "#ebffe6",
+            "on-primary": "#283500",
+            "error-container": "#93000a",
+            "on-primary-fixed-variant": "#3c4d00",
+            "on-surface-variant": "#c4c9ac",
+            "primary-fixed": "#c3f400",
+            "on-background": "#e5e1e4",
+            "surface-container-high": "#2a2a2c",
+            "outline-variant": "#444933",
+            "on-secondary-fixed": "#002107",
+            "surface-dim": "#131315",
+            "secondary-fixed-dim": "#00e55b",
+            "primary-fixed-dim": "#abd600",
+            "surface-tint": "#abd600",
+            "on-tertiary-container": "#63636e",
+            "secondary-fixed": "#6bff83",
+            "on-tertiary-fixed-variant": "#454650",
+            "on-secondary-fixed-variant": "#00531b",
+            "surface-container": "#201f21",
+            "inverse-primary": "#506600",
+            "on-secondary-container": "#007128",
+            "primary-container": "#c3f400",
+            "surface-bright": "#39393b",
+            "on-tertiary": "#2f3039",
+            "tertiary-fixed-dim": "#c6c5d2",
+            "on-tertiary-fixed": "#1a1b24",
+            "surface-container-lowest": "#0a0a0c",
+            "on-surface": "#e5e1e4",
+            "primary": "#ffffff",
+            "tertiary-fixed": "#e3e1ee",
+            "on-primary-container": "#161e00"
+          },
+          borderRadius: {
+            "DEFAULT": "1rem",
+            "lg": "1.5rem",
+            "xl": "2rem",
+            "2xl": "2.5rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "gutter-desktop": "2.5rem",
+            "space-4xl": "6rem",
+            "space-xs": "0.5rem",
+            "space-2xs": "0.25rem",
+            "space-sm": "0.75rem",
+            "space-xl": "2rem",
+            "space-2xl": "3rem",
+            "gutter-mobile": "1.25rem",
+            "space-lg": "1.5rem",
+            "space-md": "1rem",
+            "max-width": "1360px",
+            "space-3xl": "4.5rem"
+          },
+          fontFamily: {
+            "headline-lg": ["Syne", "sans-serif"],
+            "headline-sm": ["Syne", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "label-lg": ["Space Grotesk", "sans-serif"],
+            "label-sm": ["Space Grotesk", "sans-serif"],
+            "display-hero": ["Syne", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "label-md": ["Space Grotesk", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"]
+          },
+          keyframes: {
+            eq: {
+              '0%, 100%': { height: '4px' },
+              '50%': { height: '18px' }
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-6px)' }
+            },
+            glow: {
+              '0%, 100%': { opacity: '0.4' },
+              '50%': { opacity: '0.8' }
+            }
+          },
+          animation: {
+            'eq-1': 'eq 0.8s ease-in-out infinite',
+            'eq-2': 'eq 1.1s ease-in-out 0.2s infinite',
+            'eq-3': 'eq 0.7s ease-in-out 0.4s infinite',
+            'eq-4': 'eq 1.3s ease-in-out 0.1s infinite',
+            'eq-5': 'eq 0.9s ease-in-out 0.3s infinite',
+            'float-slow': 'float 4s ease-in-out infinite',
+            'glow-pulse': 'glow 3s ease-in-out infinite'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Custom Scrollbar & Smooth Effects */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0e0e10;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2a2a2c;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #c3f400;
+    }
+    
+    .glow-accent {
+      box-shadow: 0 0 35px rgba(195, 244, 0, 0.25);
+    }
+    .glow-accent-lg {
+      box-shadow: 0 0 60px rgba(195, 244, 0, 0.35);
+    }
+    .neon-border {
+      border: 1px solid rgba(195, 244, 0, 0.2);
+    }
+    .glass-panel {
+      background: rgba(32, 31, 33, 0.65);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .glass-card {
+      background: rgba(28, 27, 29, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card:hover {
+      background: rgba(42, 42, 44, 0.85);
+      border-color: rgba(195, 244, 0, 0.3);
+      transform: translateY(-4px);
+    }
+    
+    /* Interactive noise overlay */
+    .bg-grid-pattern {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+  </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen relative overflow-x-hidden">
+
+  <!-- Subtle ambient noise & glow background -->
+  <div class="fixed inset-0 bg-grid-pattern pointer-events-none opacity-60 z-0"></div>
+  <div class="fixed top-[-10%] left-[20%] w-[600px] h-[600px] bg-primary-container/5 rounded-full blur-[140px] pointer-events-none z-0"></div>
+  <div class="fixed bottom-[10%] right-[10%] w-[500px] h-[500px] bg-secondary-container/5 rounded-full blur-[160px] pointer-events-none z-0"></div>
+
+  <!-- ================================================================= -->
+  <!-- HEADER & NAVIGATION                                               -->
+  <!-- ================================================================= -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl border-b border-white/5 transition-all duration-300" id="navbar">
+    <div class="h-20 max-w-max-width mx-auto px-gutter-mobile lg:px-gutter-desktop flex items-center justify-between gap-space-md">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-space-sm group">
+        <div class="w-9 h-9 rounded-lg bg-primary-container/10 border border-primary-container/30 flex items-center justify-center text-primary-container group-hover:scale-105 transition-transform">
+          <span class="material-symbols-outlined text-[22px]">movie_edit</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-xl font-extrabold text-primary tracking-tight">CUTFRAME<span class="text-primary-container">.</span></span>
+          <span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider -mt-1 font-semibold">Video Directing & Ads</span>
+        </div>
+        
+        <!-- Live Status Pill -->
+        <div class="hidden sm:flex items-center gap-space-2xs bg-surface-container-high/80 border border-white/5 px-space-sm py-1 rounded-full ml-space-xs">
+          <span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+          <span class="font-label-sm text-[11px] uppercase text-secondary-container tracking-wider font-semibold">Available for Work</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-space-lg font-label-md text-sm uppercase tracking-wider">
+        <a class="text-on-surface-variant hover:text-primary-container transition-colors py-1" href="#work">Work</a>
+        <a class="text-on-surface-variant hover:text-primary-container transition-colors py-1" href="#services">Services</a>
+        <a class="text-on-surface-variant hover:text-primary-container transition-colors py-1" href="#process">Process</a>
+        <a class="text-on-surface-variant hover:text-primary-container transition-colors py-1" href="#calculator">ROAS Lift</a>
+        <a class="text-on-surface-variant hover:text-primary-container transition-colors py-1" href="#reviews">Reviews</a>
+      </nav>
+
+      <!-- CTA & Mobile Toggle -->
+      <div class="flex items-center gap-space-sm">
+        <a class="hidden sm:inline-flex items-center justify-center gap-1.5 bg-primary-container text-on-primary-container font-label-md text-xs uppercase font-bold px-5 py-2.5 rounded-full shadow-[0_0_20px_rgba(195,244,0,0.25)] hover:shadow-[0_0_30px_rgba(195,244,0,0.45)] hover:scale-[1.02] active:scale-[0.98] transition-all" href="#contact">
+          <span>Book a Call</span>
+          <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+        </a>
+        
+        <a href="https://wa.me/918978178134" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-surface-container-high border border-white/5 flex items-center justify-center text-primary hover:text-primary-container hover:bg-surface-container-highest transition-colors" title="Chat on WhatsApp">
+          <span class="material-symbols-outlined text-[18px]">chat</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-toggle" aria-label="Toggle mobile menu" class="md:hidden w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary hover:text-primary-container">
+          <span class="material-symbols-outlined text-[24px]" id="mobile-menu-icon">menu</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-surface-container-lowest/95 border-b border-white/10 px-gutter-mobile py-space-lg flex flex-col gap-space-md transition-all">
+      <a class="mobile-nav-link text-lg font-semibold text-primary py-2 border-b border-white/5" href="#work">Work</a>
+      <a class="mobile-nav-link text-lg font-semibold text-primary py-2 border-b border-white/5" href="#services">Services</a>
+      <a class="mobile-nav-link text-lg font-semibold text-primary py-2 border-b border-white/5" href="#process">Process</a>
+      <a class="mobile-nav-link text-lg font-semibold text-primary py-2 border-b border-white/5" href="#calculator">ROAS Calculator</a>
+      <a class="mobile-nav-link text-lg font-semibold text-primary py-2 border-b border-white/5" href="#reviews">Client Reviews</a>
+      <a class="mobile-nav-link text-lg font-semibold text-primary py-2" href="#contact">Contact & Booking</a>
+      <div class="pt-2 flex flex-col gap-2">
+        <a href="https://wa.me/918978178134" target="_blank" class="w-full text-center bg-primary-container text-on-primary-container font-label-md py-3 rounded-full font-bold uppercase text-xs">
+          Chat on WhatsApp (+91 8978178134)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full pt-20 relative z-10">
+
+    <!-- ================================================================= -->
+    <!-- 1. HERO SECTION                                                   -->
+    <!-- ================================================================= -->
+    <section class="relative w-full max-w-max-width mx-auto px-gutter-mobile lg:px-gutter-desktop pt-space-xl pb-space-3xl flex flex-col items-center">
+      
+      <!-- Ambient Backdrop Aura -->
+      <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-full max-w-3xl h-96 bg-gradient-to-b from-primary-container/15 via-primary-container/5 to-transparent blur-3xl pointer-events-none -z-10 rounded-full"></div>
+      
+      <!-- Status Capsule -->
+      <div class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-high/80 border border-white/10 backdrop-blur-md shadow-sm mb-space-lg">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-secondary-container"></span>
+        </span>
+        <span class="font-label-sm text-xs uppercase tracking-wider text-secondary-container font-semibold">
+          Available for Projects • 48H First Cut Turnaround
+        </span>
+      </div>
+
+      <!-- Primary Display Headline -->
+      <h1 class="font-display-hero text-4xl sm:text-6xl lg:text-7xl text-center text-primary font-extrabold tracking-tight max-w-5xl leading-[1.08]">
+        I edit ads that stop the scroll and <span class="text-primary-container drop-shadow-[0_0_30px_rgba(195,244,0,0.4)] underline decoration-primary-container/40 decoration-wavy underline-offset-8">print ROAS.</span>
+      </h1>
+
+      <!-- Subtitle Description -->
+      <p class="mt-space-lg text-center font-body-lg text-base sm:text-lg text-on-surface-variant max-w-2xl font-normal leading-relaxed">
+        Hook-driven UGC, viral short-form pacing, and brand creatives engineered specifically for high-conversion performance on <strong class="text-primary font-medium">TikTok, IG Reels, and YouTube Shorts</strong>.
+      </p>
+
+      <!-- CTAs -->
+      <div class="mt-space-xl flex flex-wrap items-center justify-center gap-space-md">
+        <a class="inline-flex items-center justify-center gap-2 bg-primary-container text-on-primary-container font-label-lg text-sm uppercase font-bold px-8 py-3.5 rounded-full shadow-[0_0_28px_rgba(195,244,0,0.3)] hover:shadow-[0_0_40px_rgba(195,244,0,0.5)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-200" href="#contact">
+          <span class="material-symbols-outlined text-[20px]">calendar_today</span>
+          <span>Book a Discovery Call</span>
+        </a>
+        <a class="inline-flex items-center justify-center gap-space-xs bg-surface-container-high/80 border border-white/10 backdrop-blur-md text-primary hover:text-primary-container font-label-lg text-sm uppercase font-semibold px-7 py-3.5 rounded-full hover:bg-surface-container-highest transition-all duration-200" href="#work">
+          <span class="material-symbols-outlined text-[20px] text-primary-container">play_circle</span>
+          <span>View 9:16 Work</span>
+        </a>
+      </div>
+
+      <!-- Metrics Ribbon -->
+      <div class="mt-space-2xl grid grid-cols-1 sm:grid-cols-3 gap-space-md w-full max-w-3xl">
+        
+        <div class="glass-card flex items-center gap-space-sm p-space-md rounded-xl">
+          <div class="w-12 h-12 rounded-xl bg-primary-container/10 border border-primary-container/20 flex items-center justify-center text-primary-container shrink-0">
+            <span class="material-symbols-outlined text-[24px]">visibility</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-2xl font-bold text-primary">120M+</span>
+            <span class="font-label-sm text-xs uppercase tracking-wider text-on-surface-variant font-semibold">Organic Views Generated</span>
+          </div>
+        </div>
+
+        <div class="glass-card flex items-center gap-space-sm p-space-md rounded-xl">
+          <div class="w-12 h-12 rounded-xl bg-secondary-container/10 border border-secondary-container/20 flex items-center justify-center text-secondary-container shrink-0">
+            <span class="material-symbols-outlined text-[24px]">trending_up</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-2xl font-bold text-primary">3.4x</span>
+            <span class="font-label-sm text-xs uppercase tracking-wider text-on-surface-variant font-semibold">Avg Client ROAS Lift</span>
+          </div>
+        </div>
+
+        <div class="glass-card flex items-center gap-space-sm p-space-md rounded-xl">
+          <div class="w-12 h-12 rounded-xl bg-primary-container/10 border border-primary-container/20 flex items-center justify-center text-primary-container shrink-0">
+            <span class="material-symbols-outlined text-[24px]">bolt</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-2xl font-bold text-primary">48hr</span>
+            <span class="font-label-sm text-xs uppercase tracking-wider text-on-surface-variant font-semibold">First Cut Turnaround</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Featured Interactive Showreel Frame -->
+      <div class="mt-space-3xl w-full max-w-5xl rounded-2xl overflow-hidden bg-surface-container-lowest border border-white/10 shadow-2xl relative group" id="main-showreel-container">
+        
+        <!-- Video Canvas / Native Video Player -->
+        <div class="w-full aspect-[16/9] relative overflow-hidden bg-[#0c0c0e]" id="showreel-viewport">
+          <video 
+            id="hero-main-video" 
+            src="videos/ugc/ugc-1.mp4" 
+            playsinline 
+            preload="auto"
+            loop
+            autoplay
+            muted
+            class="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-transform duration-700"
+          ></video>
+          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-surface-container-lowest/30 pointer-events-none"></div>
+        </div>
+
+        <!-- Video Control Deck Overlay -->
+        <div class="absolute inset-0 flex flex-col justify-between p-space-md lg:p-space-lg pointer-events-none">
+          
+          <!-- Top Track Header -->
+          <div class="flex items-center justify-between w-full">
+            <div class="inline-flex items-center gap-space-xs bg-surface-container-lowest/90 border border-white/10 backdrop-blur-md px-space-sm py-1.5 rounded-full pointer-events-auto shadow-lg">
+              <span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+              <span class="font-label-sm text-xs uppercase tracking-wider font-bold text-primary">Now Playing: UGC Ad Creative 1 (ugc-1.mp4)</span>
+            </div>
+            <div class="inline-flex items-center gap-space-xs">
+              <button id="hero-sound-pill" class="inline-flex items-center gap-1.5 bg-primary-container text-on-primary-container hover:bg-white text-xs font-label-sm font-bold uppercase px-3.5 py-1.5 rounded-full shadow-[0_0_20px_rgba(195,244,0,0.4)] pointer-events-auto transition-all transform hover:scale-105">
+                <span class="material-symbols-outlined text-[16px]" id="hero-sound-pill-icon">volume_off</span>
+                <span id="hero-sound-pill-text">Sound: Muted (Click for Audio)</span>
+              </button>
+              <span class="hidden sm:inline-flex font-label-sm text-[11px] font-bold uppercase bg-surface-container-high/90 text-primary-container px-2.5 py-1 rounded border border-primary-container/20">4K 60FPS</span>
+            </div>
+          </div>
+
+          <!-- Center Play Trigger -->
+          <div class="self-center pointer-events-auto cursor-pointer group-hover:scale-110 transition-transform duration-300" id="showreel-center-play">
+            <div class="w-20 h-20 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_50px_rgba(195,244,0,0.6)] hover:bg-white transition-all">
+              <span class="material-symbols-outlined text-[44px] ml-1" id="center-play-icon">play_arrow</span>
+            </div>
+          </div>
+
+          <!-- Bottom Transport Bar -->
+          <div class="w-full flex flex-col gap-space-xs bg-surface-container-lowest/90 border border-white/10 backdrop-blur-xl p-space-sm rounded-xl pointer-events-auto shadow-2xl">
+            <!-- Timeline scrubber bar -->
+            <div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden cursor-pointer relative" id="timeline-scrubber">
+              <div class="h-full bg-primary-container w-[45%] relative transition-all" id="scrubber-progress">
+                <span class="absolute right-0 top-1/2 -translate-y-1/2 w-3.5 h-3.5 bg-white rounded-full shadow-md border-2 border-primary-container"></span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-1">
+              <div class="flex items-center gap-space-md">
+                <button id="transport-play-btn" class="text-primary hover:text-primary-container transition-colors flex items-center">
+                  <span class="material-symbols-outlined text-[24px]" id="transport-play-icon">play_arrow</span>
+                </button>
+                <span class="font-label-sm text-xs text-primary font-mono" id="time-display">01:12 / 02:40</span>
+                
+                <!-- Mini Graphic Equalizer Wave -->
+                <div class="hidden sm:flex items-end gap-1 h-4">
+                  <span class="w-1 bg-primary-container rounded-full animate-eq-1"></span>
+                  <span class="w-1 bg-primary-container rounded-full animate-eq-2"></span>
+                  <span class="w-1 bg-primary-container rounded-full animate-eq-3"></span>
+                  <span class="w-1 bg-primary-container rounded-full animate-eq-4"></span>
+                  <span class="w-1 bg-primary-container rounded-full animate-eq-5"></span>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-space-md text-on-surface-variant">
+                <button id="vol-btn" class="hover:text-primary-container transition-colors flex items-center" title="Mute/Unmute">
+                  <span class="material-symbols-outlined text-[20px]" id="vol-icon">volume_up</span>
+                </button>
+                <button onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})" class="hover:text-primary-container text-xs uppercase font-label-sm font-semibold tracking-wider transition-colors hidden sm:block">
+                  Browse All Clips ↓
+                </button>
+                <button id="fullscreen-btn" class="hover:text-primary-container transition-colors flex items-center" title="Fullscreen">
+                  <span class="material-symbols-outlined text-[20px]">fullscreen</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 2. SERVICES SECTION                                               -->
+    <!-- ================================================================= -->
+    <section class="w-full max-w-max-width mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-3xl" id="services">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-md border-b border-white/5 pb-space-lg">
+        <div class="flex flex-col gap-space-2xs">
+          <div class="inline-flex items-center gap-space-2xs">
+            <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+            <span class="font-label-sm text-xs uppercase tracking-widest text-primary-container font-semibold">Specialization</span>
+          </div>
+          <h2 class="font-headline-lg text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary tracking-tight">
+            What I Do For Your Brand
+          </h2>
+        </div>
+        <p class="font-body-md text-base text-on-surface-variant max-w-md">
+          Purpose-built editing workflows to maximize watch duration, click-through rates, and algorithmic virality across all vertical platforms.
+        </p>
+      </div>
+
+      <!-- 4 Services Bento Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+        
+        <!-- Card 1 -->
+        <div class="glass-card group p-space-xl rounded-2xl flex flex-col justify-between relative overflow-hidden shadow-xl" onclick="openServiceModal('ugc')">
+          <div class="absolute -right-8 -top-8 w-40 h-40 bg-primary-container/10 rounded-full blur-2xl group-hover:bg-primary-container/20 transition-all"></div>
+          <div class="flex flex-col gap-space-md">
+            <div class="w-14 h-14 rounded-xl bg-surface-container-high group-hover:bg-primary-container text-primary group-hover:text-on-primary-container transition-all flex items-center justify-center shadow-md">
+              <span class="material-symbols-outlined text-[28px]">ad_units</span>
+            </div>
+            <h3 class="font-headline-sm text-2xl font-bold text-primary group-hover:text-primary-container transition-colors">
+              UGC Ad Creative
+            </h3>
+            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+              High-converting TikTok & Meta ads designed with native pacing, retention hooks, and dynamic captions engineered to combat ad fatigue and lower your CPA.
+            </p>
+            <ul class="flex flex-wrap gap-2 pt-2">
+              <li class="font-label-sm text-xs bg-surface-container-high/80 px-2.5 py-1 rounded text-on-surface">3-Sec Hook Variations</li>
+              <li class="font-label-sm text-xs bg-surface-container-high/80 px-2.5 py-1 rounded text-on-surface">Dynamic Animated Subtitles</li>
+              <li class="font-label-sm text-xs bg-surface-container-high/80 px-2.5 py-1 rounded text-on-surface">Split-Testing Ready</li>
+            </ul>
+          </div>
+          <div class="mt-space-lg pt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-xs uppercase tracking-wider border-t border-white/5">
+            <span class="text-primary-container font-semibold">Meta • TikTok Ads Manager</span>
+            <span class="material-symbols-outlined text-[20px] text-primary group-hover:translate-x-1.5 transition-transform group-hover:text-primary-container">arrow_forward</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="glass-card group p-space-xl rounded-2xl flex flex-col justify-between relative overflow-hidden shadow-xl" onclick="openServiceModal('brand')">
+          <div class="absolute -right-8 -top-8 w-40 h-40 bg-secondary-container/10 rounded-full blur-2xl group-hover:bg-secondary-container/20 transition-all"></div>
+          <div class="flex flex-col gap-space-md">
+            <div class="w-14 h-14 rounded-xl bg-surface-container-high group-hover:bg-primary-container text-primary group-hover:text-on-primary-container transition-all flex items-center justify-center shadow-md">
+              <span class="material-symbols-outlined text-[28px]">movie</span>
+            </div>
+            <h3 class="font-headline-sm text-2xl font-bold text-primary group-hover:text-primary-container transition-colors">
+              Brand Promo Videos
+            </h3>
+            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+              Cinematic product showcases and narrative brand shorts with top-tier sound design, bespoke micro-animations, and nuanced commercial color grading.
+            </p>
+            <ul class="flex flex-wrap gap-2 pt-2">
+              <li class="font-label-sm text-xs bg-surface-container-high/80 px-2.5 py-1 rounded text-on-surface">Commercial Color Grading</li>
+              <li class="font-label-sm text-xs bg-surface-container-high/80 px-2.5 py-1 rounded text-on-surface">Bespoke SFX Layering</li>
+              <li class="font-label-sm text-xs bg-surface-container-high/80 px-2.5 py-1 rounded text-on-surface">4K 60FPS Delivery</li>
+            </ul>
+          </div>
+          <div class="mt-space-lg pt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-xs uppercase tracking-wider border-t border-white/5">
+            <span class="text-secondary-container font-semibold">DTC • Luxury • Lifestyle</span>
+            <span class="material-symbols-outlined text-[20px] text-primary group-hover:translate-x-1.5 transition-transform group-hover:text-primary-container">arrow_forward</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="glass-card group p-space-xl rounded-2xl flex flex-col justify-between relative overflow-hidden shadow-xl" onclick="openServiceModal('repurpose')">
+          <div class="absolute -right-8 -top-8 w-40 h-40 bg-primary-container/10 rounded-full blur-2xl group-hover:bg-primary-container/20 transition-all"></div>
+          <div class="flex flex-col gap-space-md">
+            <div class="w-14 h-14 rounded-xl bg-surface-container-high group-hover:bg-primary-container text-primary group-hover:text-on-primary-container transition-all flex items-center justify-center shadow-md">
+              <span class="material-symbols-outlined text-[28px]">content_cut</span>
+            </div>
+            <h3 class="font-headline-sm text-2xl font-bold text-primary group-hover:text-primary-container transition-colors">
+              Short-Form Repurposing
+            </h3>
+            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+              Turn podcasts, long YouTube interviews, and livestream highlights into viral 60-second clips formatted with keyword tags, punch-ins, and animated subtitles.
+            </p>
+            <ul class="flex flex-wrap gap-2 pt-2">
+              <li class="font-label-sm text-xs bg-surface-container-high/80 px-2.5 py-1 rounded text-on-surface">Viral Hook Identification</li>
+              <li class="font-label-sm text-xs bg-surface-container-high/80 px-2.5 py-1 rounded text-on-surface">Kinetic Typography</li>
+              <li class="font-label-sm text-xs bg-surface-container-high/80 px-2.5 py-1 rounded text-on-surface">B-Roll & Zoom Punch-Ins</li>
+            </ul>
+          </div>
+          <div class="mt-space-lg pt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-xs uppercase tracking-wider border-t border-white/5">
+            <span class="text-primary-container font-semibold">Podcasts • YouTube • Webinars</span>
+            <span class="material-symbols-outlined text-[20px] text-primary group-hover:translate-x-1.5 transition-transform group-hover:text-primary-container">arrow_forward</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="glass-card group p-space-xl rounded-2xl flex flex-col justify-between relative overflow-hidden shadow-xl" onclick="openServiceModal('turnkey')">
+          <div class="absolute -right-8 -top-8 w-40 h-40 bg-secondary-container/10 rounded-full blur-2xl group-hover:bg-secondary-container/20 transition-all"></div>
+          <div class="flex flex-col gap-space-md">
+            <div class="w-14 h-14 rounded-xl bg-surface-container-high group-hover:bg-primary-container text-primary group-hover:text-on-primary-container transition-all flex items-center justify-center shadow-md">
+              <span class="material-symbols-outlined text-[28px]">auto_fix_high</span>
+            </div>
+            <h3 class="font-headline-sm text-2xl font-bold text-primary group-hover:text-primary-container transition-colors">
+              Raw Footage to Final Cut
+            </h3>
+            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+              Send your raw unedited creator clips or b-roll dump. I handle hook curation, sound design, SFX layering, rhythm cuts, and commercial polish end-to-end.
+            </p>
+            <ul class="flex flex-wrap gap-2 pt-2">
+              <li class="font-label-sm text-xs bg-surface-container-high/80 px-2.5 py-1 rounded text-on-surface">Script / Storyboard Polish</li>
+              <li class="font-label-sm text-xs bg-surface-container-high/80 px-2.5 py-1 rounded text-on-surface">Licensed Audio & SFX</li>
+              <li class="font-label-sm text-xs bg-surface-container-high/80 px-2.5 py-1 rounded text-on-surface">Ready-to-Publish Formats</li>
+            </ul>
+          </div>
+          <div class="mt-space-lg pt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-xs uppercase tracking-wider border-t border-white/5">
+            <span class="text-secondary-container font-semibold">Full Turnkey Scaling Pipeline</span>
+            <span class="material-symbols-outlined text-[20px] text-primary group-hover:translate-x-1.5 transition-transform group-hover:text-primary-container">arrow_forward</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 3. PORTFOLIO / WORK GRID (9:16 VERTICAL RATIO)                    -->
+    <!-- ================================================================= -->
+    <section class="w-full max-w-max-width mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-3xl" id="work">
+      
+      <div class="flex flex-col items-center text-center mb-space-xl">
+        <div class="inline-flex items-center gap-space-2xs mb-space-xs">
+          <span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+          <span class="font-label-sm text-xs uppercase tracking-widest text-secondary-container font-semibold">Featured Reels</span>
+        </div>
+        <h2 class="font-headline-lg text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary tracking-tight">
+          9:16 High-Performance Showcase
+        </h2>
+        <p class="mt-space-xs font-body-md text-base text-on-surface-variant max-w-xl">
+          Every video crafted with a hyper-optimized first 3 seconds, retention-engineered cut frequency, and clear call to purchase.
+        </p>
+
+        <!-- Category Filter Pills -->
+        <div class="mt-space-lg flex flex-wrap items-center justify-center gap-space-xs bg-surface-container-low border border-white/5 p-1.5 rounded-full shadow-inner">
+          <button class="filter-btn active px-space-md py-2 rounded-full bg-primary-container text-on-primary-container font-label-sm text-xs uppercase font-bold shadow-sm transition-all" data-category="all">
+            All (9)
+          </button>
+          <button class="filter-btn px-space-md py-2 rounded-full hover:bg-surface-container-high text-on-surface-variant hover:text-primary font-label-sm text-xs uppercase font-semibold transition-all" data-category="ugc">
+            UGC Ads (3)
+          </button>
+          <button class="filter-btn px-space-md py-2 rounded-full hover:bg-surface-container-high text-on-surface-variant hover:text-primary font-label-sm text-xs uppercase font-semibold transition-all" data-category="brand">
+            Brand Promos (3)
+          </button>
+          <button class="filter-btn px-space-md py-2 rounded-full hover:bg-surface-container-high text-on-surface-variant hover:text-primary font-label-sm text-xs uppercase font-semibold transition-all" data-category="viral">
+            Viral Reels (3)
+          </button>
+        </div>
+      </div>
+
+      <!-- 9:16 Vertical Grid: 3 columns on desktop, 2 on tablet, 1 on mobile -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="portfolio-grid">
+        
+        <!-- ==================== UGC ADS (3 SLOTS) ==================== -->
+        
+        <!-- UGC Video 1 -->
+        <div class="portfolio-card group relative aspect-[9/16] rounded-2xl overflow-hidden bg-surface-container-lowest border border-white/10 shadow-xl flex flex-col justify-between p-space-md cursor-pointer" data-category="ugc" onclick="openVideoModal('Athletic Greens UGC Ad', '2.4M views', '+380% CTR', 'Rapid problem-solution cut with kinetic animated b-roll punch-ins.', 'WHY YOUR PRODUCT ISN\'T SELLING', 'videos/ugc/ugc-1.mp4')">
+          <video src="videos/ugc/ugc-1.mp4#t=0.5" preload="metadata" muted loop playsinline class="card-preview-video absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></video>
+          <div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/70 via-transparent to-surface-container-lowest/95 pointer-events-none"></div>
+          
+          <div class="relative z-10 flex items-center justify-between">
+            <span class="inline-flex items-center gap-1 font-label-sm text-xs bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-semibold border border-white/10">
+              <span class="material-symbols-outlined text-[15px] text-primary-container">visibility</span>
+              2.4M views
+            </span>
+            <span class="font-label-sm text-xs uppercase bg-primary-container text-on-primary-container font-extrabold px-2.5 py-1 rounded shadow">
+              UGC • +380% CTR
+            </span>
+          </div>
+
+          <div class="relative z-10 self-center opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-primary-container/90 backdrop-blur-md flex items-center justify-center text-on-primary-container shadow-[0_0_30px_rgba(195,244,0,0.5)]">
+              <span class="material-symbols-outlined text-[36px] ml-1">play_arrow</span>
+            </div>
+          </div>
+
+          <div class="relative z-10 flex flex-col gap-2">
+            <span class="bg-primary-container/90 text-on-primary-container font-label-sm text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-fit">
+              “WHY YOUR PRODUCT ISN'T SELLING”
+            </span>
+            <h4 class="font-headline-sm text-xl font-bold text-primary">Athletic Greens UGC Ad</h4>
+            <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">Slot: videos/ugc/ugc-1.mp4 • Rapid problem-solution cut with kinetic punch-ins.</p>
+          </div>
+        </div>
+
+        <!-- UGC Video 2 -->
+        <div class="portfolio-card group relative aspect-[9/16] rounded-2xl overflow-hidden bg-surface-container-lowest border border-white/10 shadow-xl flex flex-col justify-between p-space-md cursor-pointer" data-category="ugc" onclick="openVideoModal('Aura Velocity Footwear', '4.1M views', '82% Retention', 'High-octane dynamic trail neon jumpcuts paired with kinetic commercial pacing.', 'ENGINEERED FOR PEAK SPEED', 'videos/ugc/ugc-2.mp4')">
+          <video src="videos/ugc/ugc-2.mp4#t=0.5" preload="metadata" muted loop playsinline class="card-preview-video absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></video>
+          <div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/70 via-transparent to-surface-container-lowest/95 pointer-events-none"></div>
+          
+          <div class="relative z-10 flex items-center justify-between">
+            <span class="inline-flex items-center gap-1 font-label-sm text-xs bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-semibold border border-white/10">
+              <span class="material-symbols-outlined text-[15px] text-primary-container">visibility</span>
+              4.1M views
+            </span>
+            <span class="font-label-sm text-xs uppercase bg-primary-container text-on-primary-container font-extrabold px-2.5 py-1 rounded shadow">
+              UGC • 82% Retention
+            </span>
+          </div>
+
+          <div class="relative z-10 self-center opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-primary-container/90 backdrop-blur-md flex items-center justify-center text-on-primary-container shadow-[0_0_30px_rgba(195,244,0,0.5)]">
+              <span class="material-symbols-outlined text-[36px] ml-1">play_arrow</span>
+            </div>
+          </div>
+
+          <div class="relative z-10 flex flex-col gap-2">
+            <span class="bg-primary-container/90 text-on-primary-container font-label-sm text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-fit">
+              “ENGINEERED FOR PEAK SPEED”
+            </span>
+            <h4 class="font-headline-sm text-xl font-bold text-primary">Aura Velocity Footwear</h4>
+            <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">Slot: videos/ugc/ugc-2.mp4 • High-octane jumpcuts paired with kinetic commercial pacing.</p>
+          </div>
+        </div>
+
+        <!-- UGC Video 3 -->
+        <div class="portfolio-card group relative aspect-[9/16] rounded-2xl overflow-hidden bg-surface-container-lowest border border-white/10 shadow-xl flex flex-col justify-between p-space-md cursor-pointer" data-category="ugc" onclick="openVideoModal('Peak Energy Drinks Ad', '3.8M views', '+420% ROAS', 'Pattern interrupt hook with viral TikTok audio mashup and rapid cut rate.', 'STOP WASTING MONEY ON ADS', 'videos/ugc/ugc-3.mp4')">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMP6D3S2PpWySd6xYWfdipTr4kKrijxwN-VUrb1YPY7f0B4nUTjhRAouM4ZVfFN3rn7u-v1rE3rXOdfNfYUacu2YycbZkubIowV5HhSMkv_twbC7EcffVfyLNdAk8u4Jc_tmqaRYuKusIHqm-NIbQ0mD8JYFDjwFDOzatJsLr5Nk4o_gPiggPxifPJxPhjQOuGzVhc-gnBYBWd-mfxpE3YfNAmapqHq0hrNabCSYTts3eHuufXOW-7');"></div>
+          <div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/80 via-transparent to-surface-container-lowest/95 pointer-events-none"></div>
+          
+          <div class="relative z-10 flex items-center justify-between">
+            <span class="inline-flex items-center gap-1 font-label-sm text-xs bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-semibold border border-white/10">
+              <span class="material-symbols-outlined text-[15px] text-primary-container">visibility</span>
+              3.8M views
+            </span>
+            <span class="font-label-sm text-xs uppercase bg-primary-container text-on-primary-container font-extrabold px-2.5 py-1 rounded shadow">
+              UGC • +420% ROAS
+            </span>
+          </div>
+
+          <div class="relative z-10 self-center opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-primary-container/90 backdrop-blur-md flex items-center justify-center text-on-primary-container shadow-[0_0_30px_rgba(195,244,0,0.5)]">
+              <span class="material-symbols-outlined text-[36px] ml-1">play_arrow</span>
+            </div>
+          </div>
+
+          <div class="relative z-10 flex flex-col gap-2">
+            <span class="bg-surface-container-highest text-primary font-label-sm text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-fit">
+              “STOP WASTING MONEY ON ADS”
+            </span>
+            <h4 class="font-headline-sm text-xl font-bold text-primary">Peak Energy Drinks Ad</h4>
+            <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">Slot: videos/ugc/ugc-3.mp4 • Pattern interrupt hook with viral audio mashup.</p>
+          </div>
+        </div>
+
+        <!-- ==================== BRAND PROMOS (3 SLOTS) ==================== -->
+
+        <!-- Brand Video 1 -->
+        <div class="portfolio-card group relative aspect-[9/16] rounded-2xl overflow-hidden bg-surface-container-lowest border border-white/10 shadow-xl flex flex-col justify-between p-space-md cursor-pointer" data-category="brand" onclick="openVideoModal('Aura D\'Or Luxury Fragrance', '840K views', '+4.2x ROAS', 'Sensory macro liquid lighting, golden reflections, and high-converting commercial hook.', 'THE SCENT THAT CONVERTS', 'videos/brand/brand-1.mp4')">
+          <video src="videos/brand/brand-1.mp4#t=0.5" preload="metadata" muted loop playsinline class="card-preview-video absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></video>
+          <div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/70 via-transparent to-surface-container-lowest/95 pointer-events-none"></div>
+          
+          <div class="relative z-10 flex items-center justify-between">
+            <span class="inline-flex items-center gap-1 font-label-sm text-xs bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-semibold border border-white/10">
+              <span class="material-symbols-outlined text-[15px] text-primary-container">visibility</span>
+              840K views
+            </span>
+            <span class="font-label-sm text-xs uppercase bg-secondary-container text-on-secondary-container font-extrabold px-2.5 py-1 rounded shadow">
+              Brand • +4.2x ROAS
+            </span>
+          </div>
+
+          <div class="relative z-10 self-center opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-primary-container/90 backdrop-blur-md flex items-center justify-center text-on-primary-container shadow-[0_0_30px_rgba(195,244,0,0.5)]">
+              <span class="material-symbols-outlined text-[36px] ml-1">play_arrow</span>
+            </div>
+          </div>
+
+          <div class="relative z-10 flex flex-col gap-2">
+            <span class="bg-surface-container-highest text-primary font-label-sm text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-fit">
+              “THE SCENT THAT CONVERTS”
+            </span>
+            <h4 class="font-headline-sm text-xl font-bold text-primary">Aura D'Or Luxury Fragrance</h4>
+            <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">Slot: videos/brand/brand-1.mp4 • Sensory macro liquid lighting & golden reflections.</p>
+          </div>
+        </div>
+
+        <!-- Brand Video 2 -->
+        <div class="portfolio-card group relative aspect-[9/16] rounded-2xl overflow-hidden bg-surface-container-lowest border border-white/10 shadow-xl flex flex-col justify-between p-space-md cursor-pointer" data-category="brand" onclick="openVideoModal('Aether Chrono Smartwatch', '1.2M views', '+5.1x ROAS', 'Hard-hitting carbon fiber macro water drops synced precisely to sub-bass audio.', 'BUILT FOR THE 0.1%', 'videos/brand/brand-2.mp4')">
+          <video src="videos/brand/brand-2.mp4#t=0.5" preload="metadata" muted loop playsinline class="card-preview-video absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></video>
+          <div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/70 via-transparent to-surface-container-lowest/95 pointer-events-none"></div>
+          
+          <div class="relative z-10 flex items-center justify-between">
+            <span class="inline-flex items-center gap-1 font-label-sm text-xs bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-semibold border border-white/10">
+              <span class="material-symbols-outlined text-[15px] text-primary-container">visibility</span>
+              1.2M views
+            </span>
+            <span class="font-label-sm text-xs uppercase bg-primary-container text-on-primary-container font-extrabold px-2.5 py-1 rounded shadow">
+              Brand • +5.1x ROAS
+            </span>
+          </div>
+
+          <div class="relative z-10 self-center opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-primary-container/90 backdrop-blur-md flex items-center justify-center text-on-primary-container shadow-[0_0_30px_rgba(195,244,0,0.5)]">
+              <span class="material-symbols-outlined text-[36px] ml-1">play_arrow</span>
+            </div>
+          </div>
+
+          <div class="relative z-10 flex flex-col gap-2">
+            <span class="bg-surface-container-highest text-primary font-label-sm text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-fit">
+              “BUILT FOR THE 0.1%”
+            </span>
+            <h4 class="font-headline-sm text-xl font-bold text-primary">Aether Chrono Smartwatch</h4>
+            <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">Slot: videos/brand/brand-2.mp4 • Carbon fiber macro drops synced to bass.</p>
+          </div>
+        </div>
+
+        <!-- Brand Video 3 -->
+        <div class="portfolio-card group relative aspect-[9/16] rounded-2xl overflow-hidden bg-surface-container-lowest border border-white/10 shadow-xl flex flex-col justify-between p-space-md cursor-pointer" data-category="brand" onclick="openVideoModal('Zenith Apparel Commercial', '1.8M views', '+4.5x ROAS', 'Urban cinematic street style commercial with dynamic speed ramping.', 'UNLEASH YOUR FORM', 'videos/brand/brand-3.mp4')">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXJ-FHd1LOqMsNBAf_BBolE5fh-tnD47hvSJTlPo5tRidwSlEmZnSS7vFXKJGbqkdWn2TUylKV5Jb5-lXfrtN9Jzw7-vLIbGzKt8GllefAhU4ct2p0CJnDi0Ph78tBoUedz6yvKtVPfZo0PhiKuMqjpHQMHGtXg8FJKuV_Kqb2gIV28id0mJlBQFwlVG20Hj4L7Yio8KvSmrE4mOof9W-WTlsDAqgySIy0mRy37XqzDiRwNoHDP7-q');"></div>
+          <div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/80 via-transparent to-surface-container-lowest/95"></div>
+          
+          <div class="relative z-10 flex items-center justify-between">
+            <span class="inline-flex items-center gap-1 font-label-sm text-xs bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-semibold border border-white/10">
+              <span class="material-symbols-outlined text-[15px] text-primary-container">visibility</span>
+              1.8M views
+            </span>
+            <span class="font-label-sm text-xs uppercase bg-secondary-container text-on-secondary-container font-extrabold px-2.5 py-1 rounded shadow">
+              Brand • +4.5x ROAS
+            </span>
+          </div>
+
+          <div class="relative z-10 self-center opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-primary-container/90 backdrop-blur-md flex items-center justify-center text-on-primary-container shadow-[0_0_30px_rgba(195,244,0,0.5)]">
+              <span class="material-symbols-outlined text-[36px] ml-1">play_arrow</span>
+            </div>
+          </div>
+
+          <div class="relative z-10 flex flex-col gap-2">
+            <span class="bg-surface-container-highest text-primary font-label-sm text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-fit">
+              “UNLEASH YOUR FORM”
+            </span>
+            <h4 class="font-headline-sm text-xl font-bold text-primary">Zenith Apparel Commercial</h4>
+            <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">Slot: videos/brand/brand-3.mp4 • Street style commercial with dynamic speed ramping.</p>
+          </div>
+        </div>
+
+        <!-- ==================== VIRAL REELS (3 SLOTS) ==================== -->
+
+        <!-- Viral Video 1 -->
+        <div class="portfolio-card group relative aspect-[9/16] rounded-2xl overflow-hidden bg-surface-container-lowest border border-white/10 shadow-xl flex flex-col justify-between p-space-md cursor-pointer" data-category="viral" onclick="openVideoModal('Fintech App Launch Viral Reel', '950K views', '78% Retention', 'Slick kinetic typography callouts and clean mobile UI screen captures.', 'UNBOXING THE ULTIMATE TECH GEAR', 'videos/viral/viral-1.mp4')">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDo0rF1dLFhwCE1oP5MG_JwFVBNsWUurYzXm4w1T3_BxUUEeurPPTj_26DqV-EZThEE3ADBhw6lEoQLAo4INrSQtRz_7vQMbr1KDIQJv5YM8jkVABsSoRnhk1hC71S8B1qP0ThsoECyIDNOy5CRqGrBZO8Lag0bcqJQIuuac6dE6hmkURCpqWWwF26GfMp94hi6eCZ9fyJHW-JF3RncP9Cp-hnZSsyWoL8CEt25T5efE-YHTILRG3Px');"></div>
+          <div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/80 via-transparent to-surface-container-lowest/95"></div>
+          
+          <div class="relative z-10 flex items-center justify-between">
+            <span class="inline-flex items-center gap-1 font-label-sm text-xs bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-semibold border border-white/10">
+              <span class="material-symbols-outlined text-[15px] text-primary-container">visibility</span>
+              950K views
+            </span>
+            <span class="font-label-sm text-xs uppercase bg-secondary-container text-on-secondary-container font-extrabold px-2.5 py-1 rounded shadow">
+              Viral • 78% Retention
+            </span>
+          </div>
+
+          <div class="relative z-10 self-center opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-primary-container/90 backdrop-blur-md flex items-center justify-center text-on-primary-container shadow-[0_0_30px_rgba(195,244,0,0.5)]">
+              <span class="material-symbols-outlined text-[36px] ml-1">play_arrow</span>
+            </div>
+          </div>
+
+          <div class="relative z-10 flex flex-col gap-2">
+            <span class="bg-primary-container/90 text-on-primary-container font-label-sm text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-fit">
+              “UNBOXING THE ULTIMATE TECH GEAR”
+            </span>
+            <h4 class="font-headline-sm text-xl font-bold text-primary">Fintech App Launch Reel</h4>
+            <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">Slot: videos/viral/viral-1.mp4 • Slick kinetic typography callouts and UI captures.</p>
+          </div>
+        </div>
+
+        <!-- Viral Video 2 -->
+        <div class="portfolio-card group relative aspect-[9/16] rounded-2xl overflow-hidden bg-surface-container-lowest border border-white/10 shadow-xl flex flex-col justify-between p-space-md cursor-pointer" data-category="viral" onclick="openVideoModal('Podcast Viral Punch-In Clip', '1.6M views', '85% Retention', 'High-energy podcast interview clipping with dynamic subtitles and sound effects.', 'HOW BILLIONAIRES THINK', 'videos/viral/viral-2.mp4')">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuARgY2_BgCnzFWmRaJl4kvjpz6JI12lE4Wq9JVJJhoFlacW3drWCyRI-5WKiW8by48jJcxW9BHXumV_IAhU9mhU_6ocl7g80D9YSkzcjxl-7uPApUlvJJ7fKD9Ts0WxnXKqG2xyqoLK5TQLp0cY6N0QD2kE1kPInUAmyp-wtnJtsmm1eb56ekXLD9erV_qQ5vmzhXwNS-oHgZ39lVVOWKE8-EBjJsoWLcreQrZfUMumPomfxfgBf8eT');"></div>
+          <div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/80 via-transparent to-surface-container-lowest/95"></div>
+          
+          <div class="relative z-10 flex items-center justify-between">
+            <span class="inline-flex items-center gap-1 font-label-sm text-xs bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-semibold border border-white/10">
+              <span class="material-symbols-outlined text-[15px] text-primary-container">visibility</span>
+              1.6M views
+            </span>
+            <span class="font-label-sm text-xs uppercase bg-primary-container text-on-primary-container font-extrabold px-2.5 py-1 rounded shadow">
+              Viral • 85% Retention
+            </span>
+          </div>
+
+          <div class="relative z-10 self-center opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-primary-container/90 backdrop-blur-md flex items-center justify-center text-on-primary-container shadow-[0_0_30px_rgba(195,244,0,0.5)]">
+              <span class="material-symbols-outlined text-[36px] ml-1">play_arrow</span>
+            </div>
+          </div>
+
+          <div class="relative z-10 flex flex-col gap-2">
+            <span class="bg-surface-container-highest text-primary font-label-sm text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-fit">
+              “HOW BILLIONAIRES THINK”
+            </span>
+            <h4 class="font-headline-sm text-xl font-bold text-primary">Podcast Viral Punch-In Clip</h4>
+            <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">Slot: videos/viral/viral-2.mp4 • High-energy interview clip with kinetic subtitles.</p>
+          </div>
+        </div>
+
+        <!-- Viral Video 3 -->
+        <div class="portfolio-card group relative aspect-[9/16] rounded-2xl overflow-hidden bg-surface-container-lowest border border-white/10 shadow-xl flex flex-col justify-between p-space-md cursor-pointer" data-category="viral" onclick="openVideoModal('Creator POV Viral Story', '2.9M views', '91% Retention', 'Fast-paced storytelling edit with trending sound design and visual meme overlays.', 'THE DAY EVERYTHING CHANGED', 'videos/viral/viral-3.mp4')">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtxEYTMBF1AL-iYV7dSuvTxLWPQOYvCdX7nfd4l8Zcg88G-4C5jCjktxV3RgvyEzcxRvemkXEckSbhoD_v17_oZvAoytTe-OPolyj4YWQC6meglhPBKhM_Gxo5_RSVFIzgHVF75dZDS0qbINo8ra_jMf2I6pxlAgySunWFJhdcbSKQjmriDWYKl64exjGl62Lw_BpQEFT3RiRlH0NdTIl-0EF5ISxPw3stFgJrukWa5FcusUy5MoWa');"></div>
+          <div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/80 via-transparent to-surface-container-lowest/95"></div>
+          
+          <div class="relative z-10 flex items-center justify-between">
+            <span class="inline-flex items-center gap-1 font-label-sm text-xs bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-semibold border border-white/10">
+              <span class="material-symbols-outlined text-[15px] text-primary-container">visibility</span>
+              2.9M views
+            </span>
+            <span class="font-label-sm text-xs uppercase bg-secondary-container text-on-secondary-container font-extrabold px-2.5 py-1 rounded shadow">
+              Viral • 91% Retention
+            </span>
+          </div>
+
+          <div class="relative z-10 self-center opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-primary-container/90 backdrop-blur-md flex items-center justify-center text-on-primary-container shadow-[0_0_30px_rgba(195,244,0,0.5)]">
+              <span class="material-symbols-outlined text-[36px] ml-1">play_arrow</span>
+            </div>
+          </div>
+
+          <div class="relative z-10 flex flex-col gap-2">
+            <span class="bg-primary-container/90 text-on-primary-container font-label-sm text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-fit">
+              “THE DAY EVERYTHING CHANGED”
+            </span>
+            <h4 class="font-headline-sm text-xl font-bold text-primary">Creator POV Viral Story</h4>
+            <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">Slot: videos/viral/viral-3.mp4 • Fast-paced storytelling with sound design.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 4. PROCESS SECTION ('HOW WE WORK')                                -->
+    <!-- ================================================================= -->
+    <section class="w-full max-w-max-width mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-3xl" id="process">
+      
+      <div class="flex flex-col items-center text-center mb-space-2xl">
+        <span class="font-label-sm text-xs uppercase tracking-widest text-primary-container font-semibold">Fast & Painless Workflow</span>
+        <h2 class="mt-space-2xs font-headline-lg text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary tracking-tight">
+          How We Work in 3 Simple Steps
+        </h2>
+        <p class="mt-space-xs font-body-md text-base text-on-surface-variant max-w-lg">
+          Zero endless email chains. Clear handoffs, lightning-fast execution, and seamless iterative delivery.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg relative">
+        
+        <!-- Step 1 -->
+        <div class="glass-card flex flex-col p-space-xl rounded-2xl relative overflow-hidden shadow-md">
+          <div class="text-primary-container/15 font-display-hero text-6xl font-extrabold mb-space-sm select-none">
+            01
+          </div>
+          <h3 class="font-headline-sm text-2xl font-bold text-primary mb-space-xs">
+            Brief & Footage Drop
+          </h3>
+          <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+            Upload your raw files, existing creative briefs, and specific hook angles via a shared Google Drive, Dropbox, or Frame.io link.
+          </p>
+          <div class="mt-space-lg pt-space-sm flex items-center gap-space-xs text-secondary-container font-label-sm text-xs font-semibold uppercase tracking-wider border-t border-white/5">
+            <span class="material-symbols-outlined text-[18px]">cloud_upload</span>
+            Instant Intake
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="glass-card flex flex-col p-space-xl rounded-2xl relative overflow-hidden shadow-md border-primary-container/30">
+          <div class="text-primary-container/25 font-display-hero text-6xl font-extrabold mb-space-sm select-none">
+            02
+          </div>
+          <h3 class="font-headline-sm text-2xl font-bold text-primary mb-space-xs">
+            Retention Edit & Sound
+          </h3>
+          <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+            I assemble native platform cuts, bespoke sound design, licensed trending audio, retention graphics, and styled subtitles within 48 hours.
+          </p>
+          <div class="mt-space-lg pt-space-sm flex items-center gap-space-xs text-primary-container font-label-sm text-xs font-semibold uppercase tracking-wider border-t border-white/5">
+            <span class="material-symbols-outlined text-[18px]">speed</span>
+            48-Hour First Cut Delivery
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="glass-card flex flex-col p-space-xl rounded-2xl relative overflow-hidden shadow-md">
+          <div class="text-primary-container/15 font-display-hero text-6xl font-extrabold mb-space-sm select-none">
+            03
+          </div>
+          <h3 class="font-headline-sm text-2xl font-bold text-primary mb-space-xs">
+            Revisions & Scale
+          </h3>
+          <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+            Review on Frame.io with unlimited timestamped tweaks on your first round. Once approved, push straight to Ads Manager and scale.
+          </p>
+          <div class="mt-space-lg pt-space-sm flex items-center gap-space-xs text-secondary-container font-label-sm text-xs font-semibold uppercase tracking-wider border-t border-white/5">
+            <span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+            Scale ROAS & Profit
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================================================================= -->
+    <!-- 6. INTERACTIVE ROAS / REVENUE ESTIMATOR CALCULATOR               -->
+    <!-- ================================================================= -->
+    <section class="w-full max-w-max-width mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-3xl" id="calculator">
+      
+      <div class="glass-panel rounded-3xl p-space-xl lg:p-space-3xl border border-primary-container/20 shadow-2xl relative overflow-hidden">
+        
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary-container/10 blur-3xl rounded-full pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-space-2xl items-center">
+          
+          <!-- Left Info & Controls -->
+          <div class="flex flex-col gap-space-md">
+            <div class="inline-flex items-center gap-space-2xs">
+              <span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+              <span class="font-label-sm text-xs uppercase tracking-widest text-secondary-container font-semibold">Live ROI Simulator</span>
+            </div>
+            
+            <h2 class="font-headline-lg text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">
+              Estimate Your Additional Revenue With Viral Pacing
+            </h2>
+            
+            <p class="text-sm text-on-surface-variant leading-relaxed">
+              Standard ads suffer from 70%+ drop-off in the first 3 seconds. See how hook-optimized retention edits impact your top line:
+            </p>
+
+            <!-- Slider 1: Monthly Ad Spend -->
+            <div class="mt-4 space-y-2">
+              <div class="flex justify-between items-center text-sm font-label-md">
+                <span class="text-on-surface-variant uppercase text-xs">Current Monthly Ad Spend:</span>
+                <span class="text-primary font-bold text-base" id="spend-label">$10,000 / mo</span>
+              </div>
+              <input type="range" id="spend-slider" min="2000" max="100000" step="1000" value="10000" class="w-full h-2 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-[#c3f400]">
+              <div class="flex justify-between text-[10px] text-on-surface-variant font-mono">
+                <span>$2K</span>
+                <span>$50K</span>
+                <span>$100K+</span>
+              </div>
+            </div>
+
+            <!-- Slider 2: Current ROAS -->
+            <div class="mt-2 space-y-2">
+              <div class="flex justify-between items-center text-sm font-label-md">
+                <span class="text-on-surface-variant uppercase text-xs">Current Blended ROAS:</span>
+                <span class="text-primary font-bold text-base" id="roas-label">2.0x</span>
+              </div>
+              <input type="range" id="roas-slider" min="1.0" max="5.0" step="0.1" value="2.0" class="w-full h-2 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-[#c3f400]">
+              <div class="flex justify-between text-[10px] text-on-surface-variant font-mono">
+                <span>1.0x</span>
+                <span>3.0x</span>
+                <span>5.0x</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Calculation Results Card -->
+          <div class="bg-surface-container-lowest/90 border border-white/10 rounded-2xl p-space-xl flex flex-col gap-space-md shadow-xl">
+            <span class="font-label-sm text-xs uppercase tracking-wider text-primary-container font-bold">Projected Results with CUTFRAME</span>
+            
+            <div class="grid grid-cols-2 gap-4 pt-2">
+              <div class="bg-surface-container/60 p-4 rounded-xl border border-white/5">
+                <span class="text-xs text-on-surface-variant uppercase font-label-sm">Projected ROAS</span>
+                <div class="font-headline-lg text-3xl font-extrabold text-primary mt-1" id="projected-roas">3.2x</div>
+                <span class="text-[11px] text-secondary-container font-semibold">+60% Avg Lift</span>
+              </div>
+              
+              <div class="bg-surface-container/60 p-4 rounded-xl border border-white/5">
+                <span class="text-xs text-on-surface-variant uppercase font-label-sm">Estimated New Rev</span>
+                <div class="font-headline-lg text-3xl font-extrabold text-primary-container mt-1" id="projected-rev">$32,000</div>
+                <span class="text-[11px] text-on-surface-variant font-mono">Per month</span>
+              </div>
+            </div>
+
+            <div class="bg-primary-container/10 border border-primary-container/30 p-4 rounded-xl mt-2 flex items-center justify-between">
+              <div>
+                <span class="text-xs uppercase font-label-sm text-primary-container font-bold">Monthly Profit Gain:</span>
+                <div class="font-headline-sm text-2xl font-extrabold text-primary" id="profit-gain">+$12,000 / mo</div>
+              </div>
+              <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">trending_up</span>
+              </div>
+            </div>
+
+            <a href="#contact" class="mt-2 text-center bg-primary-container hover:bg-white text-on-primary-container font-label-sm text-xs font-extrabold uppercase py-3.5 rounded-full shadow-lg transition-all">
+              Lock In These Numbers Today
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 7. SOCIAL PROOF & CLIENT TRUST                                    -->
+    <!-- ================================================================= -->
+    <section class="w-full bg-surface-container-lowest/80 border-y border-white/5 py-space-3xl" id="reviews">
+      <div class="max-w-max-width mx-auto px-gutter-mobile lg:px-gutter-desktop flex flex-col gap-space-2xl">
+        
+        <!-- Logo Strip -->
+        <div class="flex flex-col items-center gap-space-lg text-center">
+          <span class="font-label-sm text-xs uppercase tracking-widest text-on-surface-variant font-semibold">
+            Trusted by high-growth DTC brands and top-tier creators
+          </span>
+          <div class="w-full flex flex-wrap items-center justify-center gap-x-space-2xl gap-y-space-md opacity-80">
+            <span class="font-headline-sm text-lg font-extrabold tracking-tight text-primary hover:text-primary-container transition-colors">HYPERGROWTH DTC</span>
+            <span class="font-headline-sm text-lg font-extrabold tracking-tight text-primary hover:text-primary-container transition-colors">LUMEN MEDIA</span>
+            <span class="font-headline-sm text-lg font-extrabold tracking-tight text-primary hover:text-primary-container transition-colors">CREATORLAB</span>
+            <span class="font-headline-sm text-lg font-extrabold tracking-tight text-primary hover:text-primary-container transition-colors">AURA BOTANICALS</span>
+            <span class="font-headline-sm text-lg font-extrabold tracking-tight text-primary hover:text-primary-container transition-colors">ZENITH APPAREL</span>
+          </div>
+        </div>
+
+        <!-- 3 Testimonial Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg pt-space-md">
+          
+          <!-- Testimonial 1 -->
+          <div class="glass-card p-space-xl rounded-2xl flex flex-col justify-between gap-space-md shadow-md">
+            <div class="flex flex-col gap-space-sm">
+              <div class="flex items-center text-primary-container">
+                <span class="material-symbols-outlined text-[20px]">star</span>
+                <span class="material-symbols-outlined text-[20px]">star</span>
+                <span class="material-symbols-outlined text-[20px]">star</span>
+                <span class="material-symbols-outlined text-[20px]">star</span>
+                <span class="material-symbols-outlined text-[20px]">star</span>
+              </div>
+              <p class="font-body-md text-sm text-on-surface leading-relaxed italic">
+                “Our TikTok ROAS surged from 1.8x to 4.2x inside two weeks. His hook pacing and native caption animations cut straight through the noise.”
+              </p>
+            </div>
+            <div class="flex items-center gap-space-sm pt-space-xs border-t border-white/5">
+              <div class="w-11 h-11 rounded-full bg-primary-container/20 border border-primary-container/40 flex items-center justify-center font-bold text-primary-container font-label-md">
+                JD
+              </div>
+              <div class="flex flex-col">
+                <span class="font-label-md text-sm font-bold text-primary">Julian Drake</span>
+                <span class="font-label-sm text-xs text-on-surface-variant">@dtcfounder • CEO at NutraVita</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="glass-card p-space-xl rounded-2xl flex flex-col justify-between gap-space-md shadow-md">
+            <div class="flex flex-col gap-space-sm">
+              <div class="flex items-center text-primary-container">
+                <span class="material-symbols-outlined text-[20px]">star</span>
+                <span class="material-symbols-outlined text-[20px]">star</span>
+                <span class="material-symbols-outlined text-[20px]">star</span>
+                <span class="material-symbols-outlined text-[20px]">star</span>
+                <span class="material-symbols-outlined text-[20px]">star</span>
+              </div>
+              <p class="font-body-md text-sm text-on-surface leading-relaxed italic">
+                “The 48-hour delivery timeline is real. We handed over 30 raw creator clips and got back 8 killer ad variations ready for Ads Manager tests immediately.”
+              </p>
+            </div>
+            <div class="flex items-center gap-space-sm pt-space-xs border-t border-white/5">
+              <div class="w-11 h-11 rounded-full bg-secondary-container/20 border border-secondary-container/40 flex items-center justify-center font-bold text-secondary-container font-label-md">
+                SR
+              </div>
+              <div class="flex flex-col">
+                <span class="font-label-md text-sm font-bold text-primary">Sarah Ramirez</span>
+                <span class="font-label-sm text-xs text-on-surface-variant">@growthdirector • Head of Paid Social</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="glass-card p-space-xl rounded-2xl flex flex-col justify-between gap-space-md shadow-md">
+            <div class="flex flex-col gap-space-sm">
+              <div class="flex items-center text-primary-container">
+                <span class="material-symbols-outlined text-[20px]">star</span>
+                <span class="material-symbols-outlined text-[20px]">star</span>
+                <span class="material-symbols-outlined text-[20px]">star</span>
+                <span class="material-symbols-outlined text-[20px]">star</span>
+                <span class="material-symbols-outlined text-[20px]">star</span>
+              </div>
+              <p class="font-body-md text-sm text-on-surface leading-relaxed italic">
+                “One of the few editors who genuinely gets creator tone. It doesn't look like generic agency slop—it feels authentic, viral, and addictive to watch.”
+              </p>
+            </div>
+            <div class="flex items-center gap-space-sm pt-space-xs border-t border-white/5">
+              <div class="w-11 h-11 rounded-full bg-primary-container/20 border border-primary-container/40 flex items-center justify-center font-bold text-primary-container font-label-md">
+                ML
+              </div>
+              <div class="flex flex-col">
+                <span class="font-label-md text-sm font-bold text-primary">Marcus Lee</span>
+                <span class="font-label-sm text-xs text-on-surface-variant">@creatorbrand • 850K Followers</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 8. FREQUENTLY ASKED QUESTIONS (ACCORDION)                         -->
+    <!-- ================================================================= -->
+    <section class="w-full max-w-3xl mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-3xl" id="faq">
+      <div class="flex flex-col items-center text-center mb-space-xl">
+        <span class="font-label-sm text-xs uppercase tracking-widest text-primary-container font-semibold">Clear Answers</span>
+        <h2 class="font-headline-lg text-3xl sm:text-4xl font-extrabold text-primary tracking-tight mt-1">
+          Frequently Asked Questions
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div class="glass-card rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex justify-between items-center text-base font-bold text-primary hover:text-primary-container transition-colors">
+            <span>What software and editing stack do you use?</span>
+            <span class="material-symbols-outlined faq-icon transition-transform">expand_more</span>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-sm text-on-surface-variant leading-relaxed">
+            I edit primarily in Adobe Premiere Pro, After Effects for custom kinetic motion design, and DaVinci Resolve for studio-grade commercial color grading. Audio is mastered with Dolby Pro specs and high-impact SFX libraries.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="glass-card rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex justify-between items-center text-base font-bold text-primary hover:text-primary-container transition-colors">
+            <span>How does the 48-hour delivery timeline work?</span>
+            <span class="material-symbols-outlined faq-icon transition-transform">expand_more</span>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-sm text-on-surface-variant leading-relaxed">
+            As soon as you upload your raw footage and brief into our shared Frame.io / Google Drive folder, your 48-hour clock begins. You receive the first polished cut with sound design and hook variations within 48 business hours.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="glass-card rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex justify-between items-center text-base font-bold text-primary hover:text-primary-container transition-colors">
+            <span>Can you help write hooks and script angles?</span>
+            <span class="material-symbols-outlined faq-icon transition-transform">expand_more</span>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-sm text-on-surface-variant leading-relaxed">
+            Yes! For every video, I provide 2-3 alternative high-retention hook cut angles (problem/agitation, curiosity gap, trend mashup) to give your media buyer multiple variations to A/B test in Meta & TikTok Ads Manager.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="glass-card rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex justify-between items-center text-base font-bold text-primary hover:text-primary-container transition-colors">
+            <span>What happens if I need revisions?</span>
+            <span class="material-symbols-outlined faq-icon transition-transform">expand_more</span>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-sm text-on-surface-variant leading-relaxed">
+            All reviews happen directly on Frame.io where you can leave timestamped comments and visual draw-overs. Minor tweaks are usually turned around within 24 hours.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 9. CONTACT / HIGH-CONVERSION CLOSING FOOTER                       -->
+    <!-- ================================================================= -->
+    <section class="w-full max-w-max-width mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-3xl" id="contact">
+      <div class="w-full rounded-3xl bg-surface-container-low border border-white/10 p-space-xl lg:p-space-3xl flex flex-col items-center text-center relative overflow-hidden shadow-2xl">
+        
+        <!-- Background Graphic Accents -->
+        <div class="absolute -bottom-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary-container/20 blur-3xl rounded-full pointer-events-none"></div>
+        
+        <!-- Status Pill -->
+        <div class="inline-flex items-center gap-space-2xs px-space-md py-1.5 rounded-full bg-surface-container-high border border-white/10 mb-space-md">
+          <span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+          <span class="font-label-sm text-xs uppercase tracking-wider text-secondary-container font-semibold">
+            Currently Taking 2 New DTC Brands & Creators
+          </span>
+        </div>
+
+        <!-- Large Bold Call to Action -->
+        <h2 class="font-headline-lg text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary tracking-tight max-w-3xl leading-tight">
+          Let’s make your next ad <span class="text-primary-container underline decoration-primary-container/40">go viral.</span>
+        </h2>
+        
+        <p class="mt-space-md font-body-lg text-base sm:text-lg text-on-surface-variant max-w-lg leading-relaxed">
+          Stop losing ROAS to boring edits. Reach out directly and let’s engineer your highest-converting short-form campaign yet.
+        </p>
+
+        <!-- Conversion Buttons Group -->
+        <div class="mt-space-2xl flex flex-wrap items-center justify-center gap-space-md w-full max-w-2xl">
+          
+          <a class="flex-1 min-w-[260px] inline-flex items-center justify-center gap-space-xs bg-primary-container text-on-primary-container font-label-lg text-sm uppercase font-bold px-space-xl py-4 rounded-full shadow-[0_0_35px_rgba(195,244,0,0.35)] hover:scale-[1.02] active:scale-[0.98] transition-transform" href="https://wa.me/918978178134?text=Hi%20Sudama,%20I'd%20like%20to%20discuss%20a%20video%20editing%20project!" rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined text-[22px]">chat</span>
+            <span>WhatsApp (+91 8978178134)</span>
+          </a>
+
+          <a class="inline-flex items-center justify-center gap-space-xs bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-lg text-sm uppercase font-bold px-space-lg py-4 rounded-full transition-colors border border-white/10" href="tel:+918978178134">
+            <span class="material-symbols-outlined text-[20px]">call</span>
+            <span>Call +91 8978178134</span>
+          </a>
+
+          <a class="inline-flex items-center justify-center gap-space-xs bg-surface-container-high hover:bg-surface-container-highest text-primary hover:text-primary-container font-label-lg text-sm uppercase font-semibold px-space-lg py-4 rounded-full transition-colors border border-white/10" href="https://instagram.com/sudama_varma_7" rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined text-[20px] text-primary-container">video_camera_front</span>
+            <span>Instagram (@sudama_varma_7)</span>
+          </a>
+
+        </div>
+
+        <!-- Quick Inquiry Mini Form -->
+        <div class="mt-space-2xl w-full max-w-xl bg-surface-container/60 border border-white/10 p-6 rounded-2xl text-left">
+          <h3 class="font-headline-sm text-lg font-bold text-primary mb-3 text-center">Quick Project Inquiry</h3>
+          <form id="inquiry-form" onsubmit="handleInquirySubmit(event)" class="space-y-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <input type="text" id="inq-name" required placeholder="Your Name" class="w-full px-4 py-2.5 rounded-xl bg-surface-container-high text-primary border border-white/10 text-sm focus:outline-none focus:border-primary-container">
+              <input type="text" id="inq-brand" required placeholder="Brand / Channel URL" class="w-full px-4 py-2.5 rounded-xl bg-surface-container-high text-primary border border-white/10 text-sm focus:outline-none focus:border-primary-container">
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <select id="inq-type" class="w-full px-4 py-2.5 rounded-xl bg-surface-container-high text-primary border border-white/10 text-sm focus:outline-none focus:border-primary-container">
+                <option value="UGC Ad Creatives">UGC Ad Creatives</option>
+                <option value="Brand Promo Video">Brand Promo Video</option>
+                <option value="Monthly Growth Retainer">Monthly Growth Retainer</option>
+                <option value="Short-Form Repurposing">Short-Form Repurposing</option>
+              </select>
+              <select id="inq-timeline" class="w-full px-4 py-2.5 rounded-xl bg-surface-container-high text-primary border border-white/10 text-sm focus:outline-none focus:border-primary-container">
+                <option value="Immediate (48hr)">Immediate (48 Hours)</option>
+                <option value="This Month">This Month</option>
+                <option value="Exploring Options">Exploring Options</option>
+              </select>
+            </div>
+            <textarea id="inq-msg" rows="2" placeholder="Tell me briefly about your project goals..." class="w-full px-4 py-2.5 rounded-xl bg-surface-container-high text-primary border border-white/10 text-sm focus:outline-none focus:border-primary-container"></textarea>
+            
+            <button type="submit" class="w-full bg-primary-container hover:bg-white text-on-primary-container font-label-md uppercase font-bold py-3 rounded-xl text-xs transition-all shadow-md flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-[18px]">send</span>
+              <span>Send Inquiry via WhatsApp / Email</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Direct Email Copy Capsule -->
+        <button class="mt-space-xl inline-flex items-center gap-space-sm bg-surface-container/80 border border-white/10 px-space-lg py-2 rounded-full cursor-pointer hover:bg-surface-container-high transition-colors text-primary hover:text-primary-container" id="email-pill">
+          <span class="material-symbols-outlined text-primary-container text-[18px]">mail</span>
+          <span class="font-label-md text-xs sm:text-sm font-mono" id="email-address">chintalapatisudamavarma@gmail.com</span>
+          <span class="material-symbols-outlined text-on-surface-variant text-[16px]" title="Click to copy">content_copy</span>
+        </button>
+
+        <!-- Quick Toast Message (hidden by default) -->
+        <div class="opacity-0 transition-opacity duration-300 font-label-sm text-xs text-primary-container mt-space-xs uppercase tracking-wider font-semibold" id="copy-toast">
+          ✓ Email copied to clipboard!
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================================= -->
+  <!-- FOOTER                                                            -->
+  <!-- ================================================================= -->
+  <footer class="w-full bg-surface-container-lowest border-t border-white/5 relative z-10">
+    <div class="max-w-max-width mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-2xl flex flex-col gap-space-2xl">
+      
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-xl">
+        <div class="flex flex-col gap-space-xs">
+          <div class="flex items-center gap-space-sm">
+            <div class="w-8 h-8 rounded-lg bg-primary-container/10 border border-primary-container/30 flex items-center justify-center text-primary-container">
+              <span class="material-symbols-outlined text-[20px]">movie_edit</span>
+            </div>
+            <span class="font-headline-sm text-xl font-bold text-primary tracking-tight">CUTFRAME<span class="text-primary-container">.</span></span>
+          </div>
+          <p class="font-body-sm text-xs text-on-surface-variant max-w-sm leading-relaxed">
+            High-velocity short-form video editing and viral UGC creative direction for venture-backed DTC brands and top-tier creators.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-space-sm">
+          <a class="px-space-md py-2 rounded-full bg-surface-container border border-white/5 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all font-label-sm text-xs tracking-wider uppercase flex items-center gap-space-2xs" href="https://instagram.com/sudama_varma_7" rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined text-[16px] text-primary-container">video_camera_front</span>
+            sudama_varma_7
+          </a>
+          <a class="px-space-md py-2 rounded-full bg-surface-container border border-white/5 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all font-label-sm text-xs tracking-wider uppercase flex items-center gap-space-2xs" href="https://wa.me/918978178134" rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined text-[16px] text-secondary-container">chat</span>
+            +91 8978178134
+          </a>
+          <a class="px-space-md py-2 rounded-full bg-surface-container border border-white/5 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all font-label-sm text-xs tracking-wider uppercase flex items-center gap-space-2xs" href="mailto:chintalapatisudamavarma@gmail.com">
+            <span class="material-symbols-outlined text-[16px] text-primary-container">mail</span>
+            Email Me
+          </a>
+          <button onclick="window.scrollTo({top:0, behavior:'smooth'})" class="w-9 h-9 rounded-full bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center text-primary transition-all ml-2" title="Back to top">
+            <span class="material-symbols-outlined text-[20px]">arrow_upward</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-md border-t border-white/5 text-on-surface-variant font-label-sm text-xs uppercase tracking-wider">
+        <div class="flex items-center gap-space-xs">
+          <span>© 2024 CUTFRAME • Sudama Varma. All rights reserved.</span>
+        </div>
+        <div class="flex items-center gap-space-lg text-on-surface-variant">
+          <span class="flex items-center gap-space-2xs">
+            <span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+            9:16 VERTICAL SPECIALIST
+          </span>
+          <span class="hidden sm:inline">•</span>
+          <span>HYDERABAD / REMOTE WORLDWIDE</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================================================================= -->
+  <!-- VIDEO PREVIEW MODAL                                               -->
+  <!-- ================================================================= -->
+  <div id="video-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-xl flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
+    <div class="relative w-full max-w-4xl bg-surface-container-lowest border border-white/15 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh]">
+      
+      <!-- Close Button -->
+      <button onclick="closeVideoModal()" class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 text-white hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center transition-colors">
+        <span class="material-symbols-outlined text-[22px]">close</span>
+      </button>
+
+      <!-- Video Player on Left / Top -->
+      <div class="w-full md:w-1/2 aspect-[9/16] max-h-[70vh] md:max-h-[85vh] relative bg-black flex items-center justify-center overflow-hidden">
+        <!-- Native Video Element (plays when an .mp4/.webm file is provided) -->
+        <video id="modal-video-element" controls autoplay playsinline loop class="w-full h-full object-cover hidden"></video>
+
+        <!-- YouTube / Vimeo Iframe (plays when a youtube/vimeo link is provided) -->
+        <iframe id="modal-video-iframe" class="w-full h-full hidden border-0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <!-- Image Poster Fallback (shows when an image URL is used) -->
+        <div id="modal-img-container" class="w-full h-full relative">
+          <img id="modal-video-img" src="" alt="Video frame" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40 flex flex-col justify-between p-4 pointer-events-none">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+              <span class="font-label-sm text-[10px] uppercase text-white tracking-widest font-bold">PREVIEW MODE</span>
+            </div>
+            
+            <div class="self-center">
+              <div class="w-16 h-16 rounded-full bg-primary-container/90 text-on-primary-container flex items-center justify-center shadow-lg animate-pulse">
+                <span class="material-symbols-outlined text-[36px] ml-1">play_arrow</span>
+              </div>
+            </div>
+
+            <div class="w-full">
+              <div class="w-full h-1 bg-white/30 rounded-full overflow-hidden mb-2">
+                <div class="h-full bg-primary-container w-2/3 animate-pulse"></div>
+              </div>
+              <div class="flex justify-between text-[11px] text-white/80 font-mono">
+                <span>00:18</span>
+                <span>00:45</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video Details & Actions on Right -->
+      <div class="w-full md:w-1/2 p-space-lg md:p-space-xl flex flex-col justify-between overflow-y-auto">
+        <div>
+          <span id="modal-hook-tag" class="inline-block bg-primary-container text-on-primary-container font-label-sm text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded mb-3">
+            HOOK ANGLE
+          </span>
+          <h3 id="modal-title" class="font-headline-sm text-2xl font-bold text-primary mb-2">
+            Project Title
+          </h3>
+          <div class="flex items-center gap-3 mb-4">
+            <span id="modal-views" class="font-label-sm text-xs bg-surface-container px-2.5 py-1 rounded text-primary font-semibold">2.4M Views</span>
+            <span id="modal-metric" class="font-label-sm text-xs bg-secondary-container text-on-secondary-container font-bold px-2.5 py-1 rounded">+380% CTR</span>
+          </div>
+          <p id="modal-desc" class="text-sm text-on-surface-variant leading-relaxed mb-6">
+            Detailed breakdown of retention edits, kinetic text styling, and pacing techniques used for this commercial asset.
+          </p>
+
+          <div class="bg-surface-container/60 p-4 rounded-xl border border-white/5 space-y-2 mb-6">
+            <span class="font-label-sm text-[11px] uppercase tracking-wider text-primary font-bold">Key Performance Elements:</span>
+            <div class="flex items-center gap-2 text-xs text-on-surface">
+              <span class="material-symbols-outlined text-primary-container text-[16px]">verified</span>
+              <span>0.8s pattern interrupt opening frame</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-on-surface">
+              <span class="material-symbols-outlined text-primary-container text-[16px]">verified</span>
+              <span>Sound SFX riser on pain-point transition</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-on-surface">
+              <span class="material-symbols-outlined text-primary-container text-[16px]">verified</span>
+              <span>Direct TikTok shop / landing page CTA sticker</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-white/10 flex flex-col gap-2">
+          <a id="modal-cta-btn" href="https://wa.me/918978178134?text=Hi%20Sudama,%20I%20want%20a%20video%20edit%20like%20your%20showcase%20reel" target="_blank" class="w-full text-center bg-primary-container hover:bg-white text-on-primary-container font-label-md uppercase font-bold py-3.5 rounded-full text-xs transition-all shadow-md">
+            Order a Creative Like This
+          </a>
+          <button onclick="closeVideoModal()" class="w-full text-center text-on-surface-variant hover:text-primary font-label-sm text-xs py-2">
+            Back to Showcase
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- JAVASCRIPT INTERACTIONS                                           -->
+  <!-- ================================================================= -->
+  <script>
+    // 1. Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileIcon = document.getElementById('mobile-menu-icon');
+    
+    mobileBtn?.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        mobileIcon.innerText = 'close';
+      } else {
+        mobileMenu.classList.add('hidden');
+        mobileIcon.innerText = 'menu';
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileIcon.innerText = 'menu';
+      });
+    });
+
+    // 2. Email Copy Handler
+    document.getElementById('email-pill')?.addEventListener('click', function() {
+      const email = 'chintalapatisudamavarma@gmail.com';
+      navigator.clipboard.writeText(email).then(() => {
+        const toast = document.getElementById('copy-toast');
+        if (toast) {
+          toast.classList.remove('opacity-0');
+          toast.classList.add('opacity-100');
+          setTimeout(() => {
+            toast.classList.remove('opacity-100');
+            toast.classList.add('opacity-0');
+          }, 2500);
+        }
+      });
+    });
+
+    // 3. Portfolio Category Filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('active', 'bg-primary-container', 'text-on-primary-container', 'font-bold');
+          b.classList.add('text-on-surface-variant', 'font-semibold');
+        });
+        btn.classList.add('active', 'bg-primary-container', 'text-on-primary-container', 'font-bold');
+        btn.classList.remove('text-on-surface-variant', 'font-semibold');
+
+        const cat = btn.getAttribute('data-category');
+        portfolioCards.forEach(card => {
+          if (cat === 'all' || card.getAttribute('data-category') === cat) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // 4. Video Modal Handler (Supports MP4 files, YouTube/Vimeo, & Image Posters)
+    function openVideoModal(title, views, metric, desc, hook, mediaUrl) {
+      document.getElementById('modal-title').innerText = title;
+      document.getElementById('modal-views').innerText = views;
+      document.getElementById('modal-metric').innerText = metric;
+      document.getElementById('modal-desc').innerText = desc;
+      document.getElementById('modal-hook-tag').innerText = `“${hook}”`;
+      
+      const videoEl = document.getElementById('modal-video-element');
+      const iframeEl = document.getElementById('modal-video-iframe');
+      const imgContainer = document.getElementById('modal-img-container');
+      const imgEl = document.getElementById('modal-video-img');
+
+      // Reset players
+      videoEl.classList.add('hidden');
+      videoEl.pause();
+      videoEl.src = '';
+      iframeEl.classList.add('hidden');
+      iframeEl.src = '';
+      imgContainer.classList.add('hidden');
+
+      const isVideoFile = mediaUrl && (mediaUrl.endsWith('.mp4') || mediaUrl.endsWith('.webm') || mediaUrl.endsWith('.mov') || mediaUrl.endsWith('.ogg') || mediaUrl.includes('/videos/'));
+      const isYouTube = mediaUrl && (mediaUrl.includes('youtube.com') || mediaUrl.includes('youtu.be'));
+      const isVimeo = mediaUrl && mediaUrl.includes('vimeo.com');
+
+      if (isVideoFile) {
+        // Play native HTML5 video file with sound and controls
+        videoEl.src = mediaUrl;
+        videoEl.classList.remove('hidden');
+        videoEl.play().catch(() => {});
+      } else if (isYouTube) {
+        // Embed YouTube
+        let embedUrl = mediaUrl;
+        if (mediaUrl.includes('watch?v=')) {
+          embedUrl = mediaUrl.replace('watch?v=', 'embed/');
+        } else if (mediaUrl.includes('youtu.be/')) {
+          embedUrl = mediaUrl.replace('youtu.be/', 'www.youtube.com/embed/');
+        } else if (mediaUrl.includes('/shorts/')) {
+          embedUrl = mediaUrl.replace('/shorts/', '/embed/');
+        }
+        iframeEl.src = embedUrl + (embedUrl.includes('?') ? '&' : '?') + 'autoplay=1';
+        iframeEl.classList.remove('hidden');
+      } else if (isVimeo) {
+        // Embed Vimeo
+        const videoId = mediaUrl.split('/').pop();
+        iframeEl.src = `https://player.vimeo.com/video/${videoId}?autoplay=1`;
+        iframeEl.classList.remove('hidden');
+      } else {
+        // Show Image Poster
+        imgEl.src = mediaUrl;
+        imgContainer.classList.remove('hidden');
+      }
+      
+      const whatsappCta = `https://wa.me/918978178134?text=${encodeURIComponent(`Hi Sudama, I want to create a video creative like "${title}"!`)}`;
+      document.getElementById('modal-cta-btn').href = whatsappCta;
+
+      const modal = document.getElementById('video-modal');
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        modal.classList.add('opacity-100');
+      }, 10);
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('video-modal');
+      const videoEl = document.getElementById('modal-video-element');
+      const iframeEl = document.getElementById('modal-video-iframe');
+
+      if (videoEl) {
+        videoEl.pause();
+        videoEl.src = '';
+      }
+      if (iframeEl) {
+        iframeEl.src = '';
+      }
+
+      modal.classList.remove('opacity-100');
+      modal.classList.add('opacity-0');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 300);
+    }
+
+    // Close on backdrop click
+    document.getElementById('video-modal')?.addEventListener('click', (e) => {
+      if (e.target.id === 'video-modal') closeVideoModal();
+    });
+
+    // 5. Interactive ROAS Calculator
+    const spendSlider = document.getElementById('spend-slider');
+    const roasSlider = document.getElementById('roas-slider');
+    const spendLabel = document.getElementById('spend-label');
+    const roasLabel = document.getElementById('roas-label');
+    const projRoas = document.getElementById('projected-roas');
+    const projRev = document.getElementById('projected-rev');
+    const profitGain = document.getElementById('profit-gain');
+
+    function updateCalculations() {
+      const spend = parseFloat(spendSlider?.value || 10000);
+      const currentRoas = parseFloat(roasSlider?.value || 2.0);
+
+      spendLabel.innerText = `$${spend.toLocaleString()} / mo`;
+      roasLabel.innerText = `${currentRoas.toFixed(1)}x`;
+
+      const boostedRoas = (currentRoas * 1.55).toFixed(1);
+      const newRev = Math.round(spend * boostedRoas);
+      const currentRev = Math.round(spend * currentRoas);
+      const profitLift = newRev - currentRev;
+
+      projRoas.innerText = `${boostedRoas}x`;
+      projRev.innerText = `$${newRev.toLocaleString()}`;
+      profitGain.innerText = `+$${profitLift.toLocaleString()} / mo`;
+    }
+
+    spendSlider?.addEventListener('input', updateCalculations);
+    roasSlider?.addEventListener('input', updateCalculations);
+
+    // 7. FAQ Accordion
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('.faq-icon');
+        const isOpen = !content.classList.contains('hidden');
+
+        // Close all
+        document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(i => i.innerText = 'expand_more');
+
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          icon.innerText = 'expand_less';
+        }
+      });
+    });
+
+    // 8. Main Hero Showreel Video Player Controls (Playing ugc-1.mp4)
+    const heroVideo = document.getElementById('hero-main-video');
+    const playBtn = document.getElementById('showreel-center-play');
+    const transportPlayBtn = document.getElementById('transport-play-btn');
+    const centerPlayIcon = document.getElementById('center-play-icon');
+    const transportPlayIcon = document.getElementById('transport-play-icon');
+    const scrubber = document.getElementById('scrubber-progress');
+    const timeDisp = document.getElementById('time-display');
+    const volBtn = document.getElementById('vol-btn');
+    const volIcon = document.getElementById('vol-icon');
+    const heroSoundPill = document.getElementById('hero-sound-pill');
+    const heroSoundPillIcon = document.getElementById('hero-sound-pill-icon');
+    const heroSoundPillText = document.getElementById('hero-sound-pill-text');
+    const fullscreenBtn = document.getElementById('fullscreen-btn');
+
+    function updateSoundUI(isMuted) {
+      if (volIcon) volIcon.innerText = isMuted ? 'volume_off' : 'volume_up';
+      if (heroSoundPillIcon) heroSoundPillIcon.innerText = isMuted ? 'volume_off' : 'volume_up';
+      if (heroSoundPillText) heroSoundPillText.innerText = isMuted ? 'Sound: Muted (Click for Audio)' : 'Sound: ON 🔊';
+      if (heroSoundPill) {
+        if (!isMuted) {
+          heroSoundPill.classList.remove('bg-primary-container', 'text-on-primary-container');
+          heroSoundPill.classList.add('bg-secondary-container', 'text-on-secondary-container');
+        } else {
+          heroSoundPill.classList.add('bg-primary-container', 'text-on-primary-container');
+          heroSoundPill.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+        }
+      }
+    }
+
+    function toggleHeroSound() {
+      if (!heroVideo) return;
+      heroVideo.muted = !heroVideo.muted;
+      updateSoundUI(heroVideo.muted);
+    }
+
+    heroSoundPill?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleHeroSound();
+    });
+
+    volBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleHeroSound();
+    });
+
+    function toggleHeroPlay() {
+      if (!heroVideo) return;
+      if (heroVideo.paused) {
+        heroVideo.play().then(() => {
+          centerPlayIcon.innerText = 'pause';
+          transportPlayIcon.innerText = 'pause';
+          playBtn.style.opacity = '0';
+        }).catch(() => {});
+      } else {
+        heroVideo.pause();
+        centerPlayIcon.innerText = 'play_arrow';
+        transportPlayIcon.innerText = 'play_arrow';
+        playBtn.style.opacity = '1';
+      }
+    }
+
+    playBtn?.addEventListener('click', toggleHeroPlay);
+    transportPlayBtn?.addEventListener('click', toggleHeroPlay);
+    heroVideo?.addEventListener('click', toggleHeroPlay);
+
+    // Initial autoplay setup
+    if (heroVideo) {
+      heroVideo.muted = true;
+      updateSoundUI(true);
+      const playPromise = heroVideo.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          centerPlayIcon.innerText = 'pause';
+          transportPlayIcon.innerText = 'pause';
+          playBtn.style.opacity = '0';
+        }).catch(() => {
+          // Autoplay blocked by browser policy until interaction
+          centerPlayIcon.innerText = 'play_arrow';
+          transportPlayIcon.innerText = 'play_arrow';
+          playBtn.style.opacity = '1';
+        });
+      }
+    }
+
+    // Show center play button on hover / pause
+    heroVideo?.addEventListener('pause', () => {
+      centerPlayIcon.innerText = 'play_arrow';
+      transportPlayIcon.innerText = 'play_arrow';
+      if (playBtn) playBtn.style.opacity = '1';
+    });
+
+    heroVideo?.addEventListener('play', () => {
+      centerPlayIcon.innerText = 'pause';
+      transportPlayIcon.innerText = 'pause';
+      if (playBtn) playBtn.style.opacity = '0';
+    });
+
+    document.getElementById('main-showreel-container')?.addEventListener('mouseenter', () => {
+      if (playBtn && !heroVideo.paused) playBtn.style.opacity = '0.7';
+    });
+    document.getElementById('main-showreel-container')?.addEventListener('mouseleave', () => {
+      if (playBtn && !heroVideo.paused) playBtn.style.opacity = '0';
+    });
+
+    // Real-time time & scrubber tracking
+    heroVideo?.addEventListener('timeupdate', () => {
+      if (!heroVideo.duration) return;
+      const progress = (heroVideo.currentTime / heroVideo.duration) * 100;
+      if (scrubber) scrubber.style.width = `${progress}%`;
+
+      const curMins = String(Math.floor(heroVideo.currentTime / 60)).padStart(2, '0');
+      const curSecs = String(Math.floor(heroVideo.currentTime % 60)).padStart(2, '0');
+      const durMins = String(Math.floor(heroVideo.duration / 60)).padStart(2, '0');
+      const durSecs = String(Math.floor(heroVideo.duration % 60)).padStart(2, '0');
+      if (timeDisp) timeDisp.innerText = `${curMins}:${curSecs} / ${durMins}:${durSecs}`;
+    });
+
+    // Click to scrub
+    document.getElementById('timeline-scrubber')?.addEventListener('click', (e) => {
+      if (!heroVideo || !heroVideo.duration) return;
+      const rect = e.currentTarget.getBoundingClientRect();
+      const pos = (e.clientX - rect.left) / rect.width;
+      heroVideo.currentTime = pos * heroVideo.duration;
+    });
+
+    // Fullscreen
+    fullscreenBtn?.addEventListener('click', () => {
+      const container = document.getElementById('main-showreel-container');
+      if (!document.fullscreenElement) {
+        container?.requestFullscreen().catch(() => heroVideo?.requestFullscreen());
+      } else {
+        document.exitFullscreen();
+      }
+    });
+
+    // 9. Dynamic Video Hover Previews & Thumbnail Frames on Portfolio Cards
+    document.querySelectorAll('.portfolio-card').forEach(card => {
+      const previewVid = card.querySelector('.card-preview-video');
+      if (previewVid) {
+        // Seek to 0.5s once loaded so thumbnail displays cleanly
+        previewVid.addEventListener('loadeddata', () => {
+          try {
+            if (previewVid.currentTime < 0.1) {
+              previewVid.currentTime = 0.5;
+            }
+          } catch(e) {}
+        });
+
+        // Hover play / pause
+        card.addEventListener('mouseenter', () => {
+          previewVid.play().catch(() => {});
+        });
+        card.addEventListener('mouseleave', () => {
+          previewVid.pause();
+          try { previewVid.currentTime = 0.5; } catch(e) {}
+        });
+      }
+    });
+
+    // 10. Inquiry Form Handler
+    function handleInquirySubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('inq-name').value;
+      const brand = document.getElementById('inq-brand').value;
+      const type = document.getElementById('inq-type').value;
+      const timeline = document.getElementById('inq-timeline').value;
+      const msg = document.getElementById('inq-msg').value;
+
+      const formatted = `Hi Sudama! My name is ${name} (${brand}).\n\nI need: ${type}\nTimeline: ${timeline}\nDetails: ${msg}`;
+      const url = `https://wa.me/918978178134?text=${encodeURIComponent(formatted)}`;
+      window.open(url, '_blank');
+    }
+
+    // 11. Service Modal Quick Info
+    function openServiceModal(type) {
+      const map = {
+        ugc: { title: "UGC Ad Creative", desc: "Crafted specifically for Meta Ads Manager & TikTok Spark Ads with 3-second pattern interrupts." },
+        brand: { title: "Brand Promo Videos", desc: "Commercial-grade motion graphics, color grading and cinematic sound design." },
+        repurpose: { title: "Short-Form Repurposing", desc: "High-yield podcast & YouTube interview slicing into retention-engineered 9:16 reels." },
+        turnkey: { title: "Raw Footage to Final Cut", desc: "Turn raw media dumps into high-ROAS marketing pipelines." }
+      };
+      const item = map[type];
+      if (item) {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        const select = document.getElementById('inq-type');
+        if (select) {
+          for (let i = 0; i < select.options.length; i++) {
+            if (select.options[i].text.toLowerCase().includes(type)) {
+              select.selectedIndex = i;
+              break;
+            }
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>

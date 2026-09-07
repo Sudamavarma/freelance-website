@@ -1,0 +1,611 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary": "#ffffff", "on-secondary": "#003911", "error": "#ffb4ab", "surface-container-low": "#1c1b1d", "surface-container-highest": "#353437", "on-error": "#690005", "surface": "#131315", "on-error-container": "#ffdad6", "inverse-on-surface": "#313032", "surface-variant": "#353437", "tertiary-container": "#e3e1ee", "secondary-container": "#00fe66", "outline": "#8e9379", "on-primary-fixed": "#161e00", "background": "#131315", "inverse-surface": "#e5e1e4", "secondary": "#ebffe6", "on-primary": "#283500", "error-container": "#93000a", "on-primary-fixed-variant": "#3c4d00", "on-surface-variant": "#c4c9ac", "primary-fixed": "#c3f400", "on-background": "#e5e1e4", "surface-container-high": "#2a2a2c", "outline-variant": "#444933", "on-secondary-fixed": "#002107", "surface-dim": "#131315", "secondary-fixed-dim": "#00e55b", "primary-fixed-dim": "#abd600", "surface-tint": "#abd600", "on-tertiary-container": "#63636e", "secondary-fixed": "#6bff83", "on-tertiary-fixed-variant": "#454650", "on-secondary-fixed-variant": "#00531b", "surface-container": "#201f21", "inverse-primary": "#506600", "on-secondary-container": "#007128", "primary-container": "#c3f400", "surface-bright": "#39393b", "on-tertiary": "#2f3039", "tertiary-fixed-dim": "#c6c5d2", "on-tertiary-fixed": "#1a1b24", "surface-container-lowest": "#0e0e10", "on-surface": "#e5e1e4", "primary": "#ffffff", "tertiary-fixed": "#e3e1ee", "on-primary-container": "#556d00" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "gutter-desktop": "2rem", "space-4xl": "6rem", "space-xs": "0.5rem", "space-2xs": "0.25rem", "space-sm": "0.75rem", "space-xl": "2rem", "space-2xl": "3rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "space-md": "1rem", "max-width": "1440px", "space-3xl": "4.5rem" }, "fontFamily": { "headline-lg": [ "Syne" ], "headline-sm": [ "Syne" ], "body-sm": [ "Inter" ], "label-lg": [ "Space Grotesk" ], "label-sm": [ "Space Grotesk" ], "display-hero-mobile": [ "Syne" ], "headline-lg-mobile": [ "Syne" ], "headline-md": [ "Syne" ], "display-hero": [ "Syne" ], "body-md": [ "Inter" ], "label-md": [ "Space Grotesk" ], "body-lg": [ "Inter" ] }, "fontSize": { "headline-lg": [ "48px", { "lineHeight": "54px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "headline-sm": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-lg": [ "14px", { "lineHeight": "18px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" } ], "display-hero-mobile": [ "44px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "headline-lg-mobile": [ "32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-md": [ "32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "display-hero": [ "80px", { "lineHeight": "84px", "letterSpacing": "-0.04em", "fontWeight": "800" } ], "body-md": [ "15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" } ], "body-lg": [ "18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background text-on-surface font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 max-w-max-width mx-auto px-gutter-mobile lg:px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><img alt="CUTFRAME Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U42AzCTwGZet5z-1FCt7qZ90kuattnLfYQ3O-0bA1SE12gyUaDHz4LLxSw6O7a38g2fxIDyYY4UqMArbE2J0tW2_uLQG4-3eWvFV39n6-VdVq30vlwvZ_ahCCWek9umuGBQlVcehmQ3ixYlFJRNg9cc0WZyn1QPWIRD66osgbdqPOpLPhUh07D_vswVCUAHDNsJgfsLAJEHTcHY0b02Is4zdS4bLnto82Lt3jWnEz0dWVRDf7LevN8IsE"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">CUTFRAME</span><div class="hidden sm:flex items-center gap-space-2xs bg-surface-container-high/60 px-space-sm py-space-2xs rounded-full ml-space-xs"><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span class="font-label-sm text-label-sm uppercase text-secondary-container tracking-wider font-semibold">Available for Work</span></div></div><nav class="hidden md:flex items-center gap-space-lg" data-active-classes="text-primary-container font-semibold"><a aria-current="page" class="uppercase tracking-wider transition-colors text-primary-container font-semibold" data-path="portfolio" href="#work">Work</a><a aria-current="page" class="uppercase tracking-wider transition-colors text-primary-container font-semibold" data-path="portfolio" href="#services">Services</a><a aria-current="page" class="uppercase tracking-wider transition-colors text-primary-container font-semibold" data-path="portfolio" href="#process">Process</a><a aria-current="page" class="uppercase tracking-wider transition-colors text-primary-container font-semibold" data-path="portfolio" href="#contact">Contact</a></nav><div class="flex items-center gap-space-sm"><a class="inline-flex items-center justify-center bg-primary-container text-on-primary-container font-label-md text-label-md uppercase font-bold px-space-lg py-space-sm rounded-full shadow-[0_0_24px_rgba(195,244,0,0.25)] hover:shadow-[0_0_32px_rgba(195,244,0,0.45)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200" href="#contact">Book a Call</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- ================================================================= -->
+<!-- 1. HERO SECTION                                                   -->
+<!-- ================================================================= -->
+<section class="relative w-full max-w-max-width mx-auto px-gutter-mobile lg:px-gutter-desktop pt-space-xl pb-space-3xl flex flex-col items-center">
+<!-- Ambient Backdrop Aura -->
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-full max-w-3xl h-96 bg-gradient-to-b from-primary-container/10 via-primary-container/5 to-transparent blur-3xl pointer-events-none -z-10 rounded-full"></div>
+<!-- Status Capsule -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-high/80 backdrop-blur-md shadow-sm mb-space-lg">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary-container"></span>
+</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-container font-semibold">
+        Available for Q2 Projects • 48H First Cut
+      </span>
+</div>
+<!-- Primary Display Headline -->
+<h1 class="font-display-hero text-headline-lg lg:text-display-hero text-center text-primary font-extrabold tracking-tighter max-w-5xl">
+      I edit ads that stop the scroll and <span class="text-primary-container drop-shadow-[0_0_24px_rgba(195,244,0,0.35)]">print ROAS.</span>
+</h1>
+<!-- Subtitle Description -->
+<p class="mt-space-md text-center font-body-lg text-body-md lg:text-body-lg text-on-surface-variant max-w-2xl font-normal">
+      Hook-driven UGC, viral short-form pacing, and brand creatives engineered specifically for high-conversion performance on TikTok, IG Reels, and YouTube Shorts.
+    </p>
+<!-- CTAs -->
+<div class="mt-space-xl flex flex-wrap items-center justify-center gap-space-md">
+<a class="inline-flex items-center justify-center bg-primary-container text-on-primary-container font-label-lg text-label-lg uppercase font-bold px-space-xl py-space-sm rounded-full shadow-[0_0_28px_rgba(195,244,0,0.25)] hover:shadow-[0_0_36px_rgba(195,244,0,0.45)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200" href="#contact">
+        Book a Call
+      </a>
+<a class="inline-flex items-center justify-center gap-space-xs bg-surface-container-high/60 backdrop-blur-md text-primary hover:text-primary-container font-label-lg text-label-lg uppercase font-semibold px-space-lg py-space-sm rounded-full hover:bg-surface-container-highest transition-all duration-200" href="#work">
+<span class="material-symbols-outlined text-[20px] text-primary-container">play_arrow</span>
+        View 9:16 Work
+      </a>
+</div>
+<!-- Metrics Ribbon -->
+<div class="mt-space-2xl grid grid-cols-1 sm:grid-cols-3 gap-space-md w-full max-w-2xl">
+<div class="flex items-center gap-space-sm bg-surface-container/70 backdrop-blur-md px-space-md py-space-sm rounded-xl">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px]">visibility</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">120M+</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Organic Views</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container/70 backdrop-blur-md px-space-md py-space-sm rounded-xl">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px]">trending_up</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">3.4x</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Avg ROAS Delivered</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container/70 backdrop-blur-md px-space-md py-space-sm rounded-xl">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px]">bolt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">48hr</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">First Cut Turnaround</span>
+</div>
+</div>
+</div>
+<!-- Featured Showreel Frame -->
+<div class="mt-space-3xl w-full max-w-5xl rounded-lg lg:rounded-xl overflow-hidden bg-surface-container-lowest shadow-2xl relative group">
+<!-- Video Poster Mockup -->
+<div class="w-full aspect-[16/9] bg-cover bg-center relative" data-alt="High energy studio edit suite with neon green glow lights, editing timeline monitors running Premier Pro, cinematic commercial color grading with motion blur cuts on multiple vertical 9:16 displays." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCXJ-FHd1LOqMsNBAf_BBolE5fh-tnD47hvSJTlPo5tRidwSlEmZnSS7vFXKJGbqkdWn2TUylKV5Jb5-lXfrtN9Jzw7-vLIbGzKt8GllefAhU4ct2p0CJnDi0Ph78tBoUedz6yvKtVPfZo0PhiKuMqjpHQMHGtXg8FJKuV_Kqb2gIV28id0mJlBQFwlVG20Hj4L7Yio8KvSmrE4mOof9W-WTlsDAqgySIy0mRy37XqzDiRwNoHDP7-q&quot;);">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+<div class="absolute inset-0 bg-surface-container-lowest/20"></div>
+</div>
+<!-- Video Control Deck Overlay -->
+<div class="absolute inset-0 flex flex-col justify-between p-space-md lg:p-space-lg pointer-events-none">
+<!-- Top Track Header -->
+<div class="flex items-center justify-between w-full">
+<div class="inline-flex items-center gap-space-xs bg-surface-container-lowest/80 backdrop-blur-md px-space-sm py-1 rounded-full pointer-events-auto">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold text-primary">2024 UGC &amp; Brand Reel</span>
+</div>
+<div class="inline-flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm font-bold uppercase bg-surface-container-high/90 text-primary-container px-2 py-0.5 rounded">4K 60FPS</span>
+<span class="font-label-sm text-label-sm font-bold uppercase bg-surface-container-high/90 text-on-surface px-2 py-0.5 rounded">DOLBY PRO</span>
+</div>
+</div>
+<!-- Center Play Trigger -->
+<div class="self-center pointer-events-auto cursor-pointer group-hover:scale-105 transition-transform duration-300">
+<div class="w-20 h-20 rounded-full bg-primary-container/90 backdrop-blur-md text-on-primary-container flex items-center justify-center shadow-[0_0_40px_rgba(195,244,0,0.5)]">
+<span class="material-symbols-outlined text-[42px] ml-1">play_arrow</span>
+</div>
+</div>
+<!-- Bottom Transport Bar -->
+<div class="w-full flex flex-col gap-space-xs bg-surface-container-lowest/80 backdrop-blur-lg p-space-sm rounded-lg pointer-events-auto">
+<!-- Timeline scrubber bar -->
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden cursor-pointer relative">
+<div class="h-full bg-primary-container w-[52%] relative">
+<span class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-primary rounded-full shadow-md"></span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-primary text-[20px] cursor-pointer hover:text-primary-container">pause</span>
+<span class="font-label-sm text-label-sm text-primary font-mono">01:24 / 02:40</span>
+<!-- Mini Graphic Equalizer Wave -->
+<div class="hidden sm:flex items-end gap-0.5 h-4">
+<span class="w-1 bg-primary-container h-3 rounded-full animate-pulse"></span>
+<span class="w-1 bg-primary-container h-4 rounded-full"></span>
+<span class="w-1 bg-primary-container h-2 rounded-full animate-pulse"></span>
+<span class="w-1 bg-primary-container h-3.5 rounded-full"></span>
+<span class="w-1 bg-primary-container h-1 rounded-full"></span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] cursor-pointer hover:text-primary">volume_up</span>
+<span class="material-symbols-outlined text-[18px] cursor-pointer hover:text-primary">settings</span>
+<span class="material-symbols-outlined text-[18px] cursor-pointer hover:text-primary">fullscreen</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================================================================= -->
+<!-- 2. SERVICES SECTION                                               -->
+<!-- ================================================================= -->
+<section class="w-full max-w-max-width mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-3xl" id="services">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<div class="inline-flex items-center gap-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container font-semibold">Specialization</span>
+</div>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg font-bold text-primary tracking-tight">
+          What I Do
+        </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+        Purpose-built editing workflows to maximize watch duration, click-through rates, and algorithmic virality across all vertical platforms.
+      </p>
+</div>
+<!-- 4 Services Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Card 1 -->
+<div class="group p-space-xl rounded-lg bg-surface-container/70 backdrop-blur-md hover:bg-surface-container-high transition-all duration-300 flex flex-col justify-between relative overflow-hidden shadow-lg">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary-container/5 rounded-full blur-2xl group-hover:bg-primary-container/15 transition-all"></div>
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high group-hover:bg-primary-container text-primary group-hover:text-on-primary-container transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">ad_units</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary group-hover:text-primary-container transition-colors">
+            UGC Ad Creative
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            High-converting TikTok &amp; Meta ads designed with native pacing, retention hooks, and dynamic captions engineered to combat ad fatigue and lower your CPA.
+          </p>
+</div>
+<div class="mt-space-lg pt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span class="">Meta • TikTok Ads Manager</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group p-space-xl rounded-lg bg-surface-container/70 backdrop-blur-md hover:bg-surface-container-high transition-all duration-300 flex flex-col justify-between relative overflow-hidden shadow-lg">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary-container/5 rounded-full blur-2xl group-hover:bg-primary-container/15 transition-all"></div>
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high group-hover:bg-primary-container text-primary group-hover:text-on-primary-container transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">movie</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary group-hover:text-primary-container transition-colors">
+            Brand Promo Videos
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Cinematic product showcases and narrative brand shorts with top-tier sound design, bespoke micro-animations, and nuanced commercial color grading.
+          </p>
+</div>
+<div class="mt-space-lg pt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span class="">DTC • Luxury • Lifestyle</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group p-space-xl rounded-lg bg-surface-container/70 backdrop-blur-md hover:bg-surface-container-high transition-all duration-300 flex flex-col justify-between relative overflow-hidden shadow-lg">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary-container/5 rounded-full blur-2xl group-hover:bg-primary-container/15 transition-all"></div>
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high group-hover:bg-primary-container text-primary group-hover:text-on-primary-container transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">content_cut</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary group-hover:text-primary-container transition-colors">
+            Short-Form Repurposing
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Turn podcasts, long YouTube interviews, and livestream highlights into viral 60-second clips formatted with keyword tags, punch-ins, and animated subtitles.
+          </p>
+</div>
+<div class="mt-space-lg pt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span class="">Podcasts • YouTube • Webinars</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group p-space-xl rounded-lg bg-surface-container/70 backdrop-blur-md hover:bg-surface-container-high transition-all duration-300 flex flex-col justify-between relative overflow-hidden shadow-lg">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary-container/5 rounded-full blur-2xl group-hover:bg-primary-container/15 transition-all"></div>
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high group-hover:bg-primary-container text-primary group-hover:text-on-primary-container transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">auto_fix_high</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary group-hover:text-primary-container transition-colors">
+            Raw Footage to Final Cut
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Send your raw unedited creator clips or b-roll dump. I handle hook curation, sound design, SFX layering, rhythm cuts, and commercial polish.
+          </p>
+</div>
+<div class="mt-space-lg pt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span class="">Full Turnkey Pipeline</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ================================================================= -->
+<!-- 3. PORTFOLIO / WORK GRID (9:16 VERTICAL RATIO)                    -->
+<!-- ================================================================= -->
+<section class="w-full max-w-max-width mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-3xl" id="work">
+<div class="flex flex-col items-center text-center mb-space-xl">
+<div class="inline-flex items-center gap-space-2xs mb-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-container font-semibold">Featured Reels</span>
+</div>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg font-bold text-primary tracking-tight">
+        9:16 High-Performance Showcase
+      </h2>
+<p class="mt-space-xs font-body-md text-body-md text-on-surface-variant max-w-xl">
+        Every video crafted with a hyper-optimized first 3 seconds, retention-engineered cut frequency, and clear call to purchase.
+      </p>
+<!-- Category Filter Pills -->
+<div class="mt-space-lg flex flex-wrap items-center justify-center gap-space-xs bg-surface-container-low p-1.5 rounded-full shadow-inner">
+<button class="px-space-md py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase font-bold shadow-sm">
+          All (9)
+        </button>
+<button class="px-space-md py-1.5 rounded-full hover:bg-surface-container-high text-on-surface-variant hover:text-primary font-label-sm text-label-sm uppercase font-semibold transition-colors">
+          UGC Ads (4)
+        </button>
+<button class="px-space-md py-1.5 rounded-full hover:bg-surface-container-high text-on-surface-variant hover:text-primary font-label-sm text-label-sm uppercase font-semibold transition-colors">
+          Brand Promos (3)
+        </button>
+<button class="px-space-md py-1.5 rounded-full hover:bg-surface-container-high text-on-surface-variant hover:text-primary font-label-sm text-label-sm uppercase font-semibold transition-colors">
+          Viral Shorts (2)
+        </button>
+</div>
+</div>
+<!-- 9:16 Vertical Grid: 3 columns on desktop, 2 on tablet, 1 on small screens -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Video Card 1 -->
+<div class="group relative aspect-[9/16] rounded-lg overflow-hidden bg-surface-container-lowest shadow-xl flex flex-col justify-between p-space-md">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Dynamic shot of a fitness supplement canister being shaken with water splashes, neon gym lighting, fast motion aesthetic vertical format." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtxEYTMBF1AL-iYV7dSuvTxLWPQOYvCdX7nfd4l8Zcg88G-4C5jCjktxV3RgvyEzcxRvemkXEckSbhoD_v17_oZvAoytTe-OPolyj4YWQC6meglhPBKhM_Gxo5_RSVFIzgHVF75dZDS0qbINo8ra_jMf2I6pxlAgySunWFJhdcbSKQjmriDWYKl64exjGl62Lw_BpQEFT3RiRlH0NdTIl-0EF5ISxPw3stFgJrukWa5FcusUy5MoWa')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/60 via-transparent to-surface-container-lowest/90"></div>
+<!-- Card Top Bar -->
+<div class="relative z-10 flex items-center justify-between">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-surface-container-lowest/80 backdrop-blur-md px-2.5 py-1 rounded-full text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px] text-primary-container">visibility</span>
+            2.4M views
+          </span>
+<span class="font-label-sm text-label-sm uppercase bg-primary-container text-on-primary-container font-bold px-2 py-0.5 rounded">
+            +380% CTR
+          </span>
+</div>
+<!-- Center Hover Play Button -->
+<div class="relative z-10 self-center opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+<div class="w-14 h-14 rounded-full bg-surface-container-lowest/70 backdrop-blur-md flex items-center justify-center text-primary-container shadow-lg">
+<span class="material-symbols-outlined text-[32px]">play_arrow</span>
+</div>
+</div>
+<!-- Card Bottom Meta -->
+<div class="relative z-10 flex flex-col gap-1.5">
+<span class="bg-primary-container/90 text-on-primary-container font-label-sm text-label-sm font-bold uppercase tracking-wider px-2 py-0.5 rounded w-fit">
+            “WHY YOUR PRODUCT ISN'T SELLING”
+          </span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-primary">Athletic Greens UGC</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rapid problem-solution cut with kinetic animated b-roll punch-ins.</p>
+</div>
+</div>
+<!-- Video Card 2 -->
+<div class="group relative aspect-[9/16] rounded-lg overflow-hidden bg-surface-container-lowest shadow-xl flex flex-col justify-between p-space-md">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Macro close-up of luxury skincare dropper bottle releasing a golden droplet, dark bathroom marble background with soft cinematic rim light, vertical frame." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC8WnTMylmkMnzVv9cYCNKk3R3tvxBcvREbX1bNx9stHhEA8wd_hNPqiF3yzfe4pcSodtjTpu_JZLKGCbWkSf8ZmG1k9Y4hvjczJ-OXnSA8vJkSCt-5dVYdRjip0B13VtPY2K6C1J-GbQkziLzyRO6V9LQiIluCBtfotKUYzjTt3-xMATnds89MkcaHDICaaVBbTGKtIJadG3NNhTyIt7dptKQ6GTm8weiLN5_Sp557sNXTQ6Zcvkp7&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/60 via-transparent to-surface-container-lowest/90"></div>
+<div class="relative z-10 flex items-center justify-between">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-surface-container-lowest/80 backdrop-blur-md px-2.5 py-1 rounded-full text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px] text-primary-container">visibility</span>
+            840K views
+          </span>
+<span class="font-label-sm text-label-sm uppercase bg-secondary-container text-on-secondary-container font-bold px-2 py-0.5 rounded">
+            +4.2x ROAS
+          </span>
+</div>
+<div class="relative z-10 self-center opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+<div class="w-14 h-14 rounded-full bg-surface-container-lowest/70 backdrop-blur-md flex items-center justify-center text-primary-container shadow-lg">
+<span class="material-symbols-outlined text-[32px]">play_arrow</span>
+</div>
+</div>
+<div class="relative z-10 flex flex-col gap-1.5"><span class="bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold uppercase tracking-wider px-2 py-0.5 rounded w-fit">“THE SCENT THAT CONVERTS”</span><h4 class="font-headline-sm text-headline-sm font-bold text-primary">Aura D'Or Luxury Fragrance</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Sensory macro liquid lighting, golden reflections, and high-converting commercial hook.</p></div>
+</div>
+<!-- Video Card 3 -->
+<div class="group relative aspect-[9/16] rounded-lg overflow-hidden bg-surface-container-lowest shadow-xl flex flex-col justify-between p-space-md">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Creator in minimalist modern living room holding a sleek high-tech titanium wearable ring, neon subtle backlights, talking head vlog angle vertical." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuARgY2_BgCnzFWmRaJl4kvjpz6JI12lE4Wq9JVJJhoFlacW3drWCyRI-5WKiW8by48jJcxW9BHXumV_IAhU9mhU_6ocl7g80D9YSkzcjxl-7uPApUlvJJ7fKD9Ts0WxnXKqG2xyqoLK5TQLp0cY6N0QD2kE1kPInUAmyp-wtnJtsmm1eb56ekXLD9erV_qQ5vmzhXwNS-oHgZ39lVVOWKE8-EBjJsoWLcreQrZfUMumPomfxfgBf8eT&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/60 via-transparent to-surface-container-lowest/90"></div>
+<div class="relative z-10 flex items-center justify-between">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-surface-container-lowest/80 backdrop-blur-md px-2.5 py-1 rounded-full text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px] text-primary-container">visibility</span>
+            4.1M views
+          </span>
+<span class="font-label-sm text-label-sm uppercase bg-primary-container text-on-primary-container font-bold px-2 py-0.5 rounded">
+            82% Retention
+          </span>
+</div>
+<div class="relative z-10 self-center opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+<div class="w-14 h-14 rounded-full bg-surface-container-lowest/70 backdrop-blur-md flex items-center justify-center text-primary-container shadow-lg">
+<span class="material-symbols-outlined text-[32px]">play_arrow</span>
+</div>
+</div>
+<div class="relative z-10 flex flex-col gap-1.5"><span class="bg-primary-container/90 text-on-primary-container font-label-sm text-label-sm font-bold uppercase tracking-wider px-2 py-0.5 rounded w-fit">“ENGINEERED FOR PEAK SPEED”</span><h4 class="font-headline-sm text-headline-sm font-bold text-primary">Aura Velocity Footwear</h4><p class="font-body-sm text-body-sm text-on-surface-variant">High-octane dynamic trail neon jumpcuts paired with kinetic commercial pacing.</p></div>
+</div>
+<!-- Video Card 4 -->
+<div class="group relative aspect-[9/16] rounded-lg overflow-hidden bg-surface-container-lowest shadow-xl flex flex-col justify-between p-space-md">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Athletic creator pulling barbell in moody underground warehouse crossfit gym, sweat glistening, high contrast dark lighting vertical composition." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCoT3bjrNpGc-YrTPg-j3K9k2HYdMWXgqa_uOst7w-ML06DONYnjsTOI8I9rB8sHB_AAsCFnWZJUGR0inejL2z8qOv_YisEr6TPV13NRxBrV_BXfRBN_Yy29-REYQLcDiCkR71txYkOpAvSYF5IE56oZOD2k_ud8VBOD5-PoiSnRsPD0-jppdDCe7bn4LeNqgbZCW_iyimuphN_KAJOaCVsVoo9awPQSRC6f5jidW11TpYweur6GyC-&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/60 via-transparent to-surface-container-lowest/90"></div>
+<div class="relative z-10 flex items-center justify-between">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-surface-container-lowest/80 backdrop-blur-md px-2.5 py-1 rounded-full text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px] text-primary-container">visibility</span>
+            1.2M views
+          </span>
+<span class="font-label-sm text-label-sm uppercase bg-primary-container text-on-primary-container font-bold px-2 py-0.5 rounded">
+            +5.1x ROAS
+          </span>
+</div>
+<div class="relative z-10 self-center opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+<div class="w-14 h-14 rounded-full bg-surface-container-lowest/70 backdrop-blur-md flex items-center justify-center text-primary-container shadow-lg">
+<span class="material-symbols-outlined text-[32px]">play_arrow</span>
+</div>
+</div>
+<div class="relative z-10 flex flex-col gap-1.5"><span class="bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold uppercase tracking-wider px-2 py-0.5 rounded w-fit">“BUILT FOR THE 0.1%”</span><h4 class="font-headline-sm text-headline-sm font-bold text-primary">Aether Chrono Smartwatch</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Hard-hitting carbon fiber macro water drops synced precisely to sub-bass audio.</p></div>
+</div>
+<!-- Video Card 5 -->
+<div class="group relative aspect-[9/16] rounded-lg overflow-hidden bg-surface-container-lowest shadow-xl flex flex-col justify-between p-space-md">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Desk aesthetic with futuristic carbon fiber unboxing packaging, neon desk mat, high end camera lens and accessories, vertical phone video format." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDo0rF1dLFhwCE1oP5MG_JwFVBNsWUurYzXm4w1T3_BxUUEeurPPTj_26DqV-EZThEE3ADBhw6lEoQLAo4INrSQtRz_7vQMbr1KDIQJv5YM8jkVABsSoRnhk1hC71S8B1qP0ThsoECyIDNOy5CRqGrBZO8Lag0bcqJQIuuac6dE6hmkURCpqWWwF26GfMp94hi6eCZ9fyJHW-JF3RncP9Cp-hnZSsyWoL8CEt25T5efE-YHTILRG3Px')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/60 via-transparent to-surface-container-lowest/90"></div>
+<div class="relative z-10 flex items-center justify-between">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-surface-container-lowest/80 backdrop-blur-md px-2.5 py-1 rounded-full text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px] text-primary-container">visibility</span>
+            950K views
+          </span>
+<span class="font-label-sm text-label-sm uppercase bg-secondary-container text-on-secondary-container font-bold px-2 py-0.5 rounded">
+            78% Retention
+          </span>
+</div>
+<div class="relative z-10 self-center opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+<div class="w-14 h-14 rounded-full bg-surface-container-lowest/70 backdrop-blur-md flex items-center justify-center text-primary-container shadow-lg">
+<span class="material-symbols-outlined text-[32px]">play_arrow</span>
+</div>
+</div>
+<div class="relative z-10 flex flex-col gap-1.5">
+<span class="bg-primary-container/90 text-on-primary-container font-label-sm text-label-sm font-bold uppercase tracking-wider px-2 py-0.5 rounded w-fit">
+            “UNBOXING THE ULTIMATE TECH GEAR”
+          </span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-primary">Fintech App Launch</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Slick kinetic typography callouts and clean mobile UI screen captures.</p>
+</div>
+</div>
+<!-- Video Card 6 -->
+<div class="group relative aspect-[9/16] rounded-lg overflow-hidden bg-surface-container-lowest shadow-xl flex flex-col justify-between p-space-md">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Bright colored energy drink can cracking open with ice cold carbonated fizz, dark studio contrast, lime green neon back rim lighting vertical." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMP6D3S2PpWySd6xYWfdipTr4kKrijxwN-VUrb1YPY7f0B4nUTjhRAouM4ZVfFN3rn7u-v1rE3rXOdfNfYUacu2YycbZkubIowV5HhSMkv_twbC7EcffVfyLNdAk8u4Jc_tmqaRYuKusIHqm-NIbQ0mD8JYFDjwFDOzatJsLr5Nk4o_gPiggPxifPJxPhjQOuGzVhc-gnBYBWd-mfxpE3YfNAmapqHq0hrNabCSYTts3eHuufXOW-7')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/60 via-transparent to-surface-container-lowest/90"></div>
+<div class="relative z-10 flex items-center justify-between">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-surface-container-lowest/80 backdrop-blur-md px-2.5 py-1 rounded-full text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px] text-primary-container">visibility</span>
+            3.8M views
+          </span>
+<span class="font-label-sm text-label-sm uppercase bg-primary-container text-on-primary-container font-bold px-2 py-0.5 rounded">
+            +420% ROAS
+          </span>
+</div>
+<div class="relative z-10 self-center opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+<div class="w-14 h-14 rounded-full bg-surface-container-lowest/70 backdrop-blur-md flex items-center justify-center text-primary-container shadow-lg">
+<span class="material-symbols-outlined text-[32px]">play_arrow</span>
+</div>
+</div>
+<div class="relative z-10 flex flex-col gap-1.5">
+<span class="bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold uppercase tracking-wider px-2 py-0.5 rounded w-fit">
+            “STOP WASTING MONEY ON ADS”
+          </span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-primary">Peak Energy Drinks</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pattern interrupt hook with viral TikTok audio mashup and rapid cut rate.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ================================================================= -->
+<!-- 4. PROCESS SECTION ('HOW WE WORK')                                -->
+<!-- ================================================================= -->
+<section class="w-full max-w-max-width mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-3xl" id="process">
+<div class="flex flex-col items-center text-center mb-space-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container font-semibold">Fast &amp; Painless Workflow</span>
+<h2 class="mt-space-2xs font-headline-lg text-headline-md lg:text-headline-lg font-bold text-primary tracking-tight">
+        How We Work in 3 Simple Steps
+      </h2>
+<p class="mt-space-xs font-body-md text-body-md text-on-surface-variant max-w-lg">
+        Zero endless email chains. Clear handoffs, lightning-fast execution, and seamless iterative delivery.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg relative">
+<!-- Step 1 -->
+<div class="flex flex-col p-space-xl rounded-lg bg-surface-container/70 backdrop-blur-md relative overflow-hidden shadow-md">
+<div class="text-primary-container/20 font-display-hero text-headline-lg font-extrabold mb-space-sm select-none">
+          01
+        </div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary mb-space-xs">
+          Brief &amp; Footage
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Upload your raw files, existing creative briefs, and specific hook angles via a shared Google Drive, Dropbox, or Frame.io link.
+        </p>
+<div class="mt-space-lg flex items-center gap-space-xs text-secondary-container font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">cloud_upload</span>
+          Instant Intake
+        </div>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col p-space-xl rounded-lg bg-surface-container/70 backdrop-blur-md relative overflow-hidden shadow-md">
+<div class="text-primary-container/20 font-display-hero text-headline-lg font-extrabold mb-space-sm select-none">
+          02
+        </div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary mb-space-xs">
+          Retention Edit
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          I assemble native platform cuts, bespoke sound design, licensed trending audio, retention graphics, and styled subtitles within 48 hours.
+        </p>
+<div class="mt-space-lg flex items-center gap-space-xs text-primary-container font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">speed</span>
+          48-Hour First Cut
+        </div>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col p-space-xl rounded-lg bg-surface-container/70 backdrop-blur-md relative overflow-hidden shadow-md">
+<div class="text-primary-container/20 font-display-hero text-headline-lg font-extrabold mb-space-sm select-none">
+          03
+        </div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary mb-space-xs">
+          Revisions &amp; Scale
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Review on Frame.io with unlimited timestamped tweaks on your first round. Once approved, push straight to Ads Manager and scale.
+        </p>
+<div class="mt-space-lg flex items-center gap-space-xs text-primary font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">rocket_launch</span>
+          Scale ROAS
+        </div>
+</div>
+</div>
+</section>
+<!-- ================================================================= -->
+<!-- 5. SOCIAL PROOF & CLIENT TRUST                                    -->
+<!-- ================================================================= -->
+<section class="w-full bg-surface-container-lowest py-space-3xl">
+<div class="max-w-max-width mx-auto px-gutter-mobile lg:px-gutter-desktop flex flex-col gap-space-2xl">
+<!-- Logo Strip -->
+<div class="flex flex-col items-center gap-space-lg text-center">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant font-semibold">
+          Trusted by high-growth DTC brands and top-tier creators
+        </span>
+<div class="w-full flex flex-wrap items-center justify-center gap-x-space-2xl gap-y-space-md opacity-70">
+<span class="font-headline-sm text-headline-sm font-extrabold tracking-tighter text-primary">HYPERGROWTH DTC</span>
+<span class="font-headline-sm text-headline-sm font-extrabold tracking-tighter text-primary">LUMEN MEDIA</span>
+<span class="font-headline-sm text-headline-sm font-extrabold tracking-tighter text-primary">CREATORLAB</span>
+<span class="font-headline-sm text-headline-sm font-extrabold tracking-tighter text-primary">AURA BOTANICALS</span>
+<span class="font-headline-sm text-headline-sm font-extrabold tracking-tighter text-primary">ZENITH APPAREL</span>
+</div>
+</div>
+<!-- 3 Testimonial Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg pt-space-md">
+<!-- Testimonial 1 -->
+<div class="p-space-xl rounded-lg bg-surface-container/60 backdrop-blur-md flex flex-col justify-between gap-space-md shadow-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              “Our TikTok ROAS surged from 1.8x to 4.2x inside two weeks. His hook pacing and native caption animations cut straight through the noise.”
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-primary font-label-md">
+              JD
+            </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary">Julian Drake</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">@dtcfounder • CEO at NutraVita</span>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="p-space-xl rounded-lg bg-surface-container/60 backdrop-blur-md flex flex-col justify-between gap-space-md shadow-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              “The 48-hour delivery timeline is real. We handed over 30 raw creator clips and got back 8 killer ad variations ready for Ads Manager tests.”
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-primary font-label-md">
+              SR
+            </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary">Sarah Ramirez</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">@growthdirector • Head of Paid Social</span>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="p-space-xl rounded-lg bg-surface-container/60 backdrop-blur-md flex flex-col justify-between gap-space-md shadow-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              “One of the few editors who genuinely gets creator tone. It doesn't look like generic agency slop—it feels authentic, viral, and addictive.”
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-primary font-label-md">
+              ML
+            </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary">Marcus Lee</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">@creatorbrand • 850K Followers</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================================================================= -->
+<!-- 6. PACKAGES & TRANSPARENT PRICING                                 -->
+<!-- ================================================================= -->
+
+<!-- ================================================================= -->
+<!-- 7. CONTACT / HIGH-CONVERSION CLOSING FOOTER                       -->
+<!-- ================================================================= -->
+<section class="w-full max-w-max-width mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-3xl" id="contact">
+<div class="w-full rounded-xl bg-surface-container-low p-space-xl lg:p-space-3xl flex flex-col items-center text-center relative overflow-hidden shadow-2xl">
+<!-- Background Graphic Accents -->
+<div class="absolute -bottom-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary-container/15 blur-3xl rounded-full pointer-events-none"></div>
+<!-- Pill -->
+<div class="inline-flex items-center gap-space-2xs px-space-md py-1 rounded-full bg-surface-container-high mb-space-md">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-container font-semibold">
+          Currently Taking 2 New DTC Brands &amp; Creators
+        </span>
+</div>
+<!-- Large Bold Call to Action -->
+<h2 class="font-headline-lg text-headline-lg lg:text-display-hero font-extrabold text-primary tracking-tight max-w-3xl">
+        Let’s make your next ad <span class="text-primary-container">go viral.</span>
+</h2>
+<p class="mt-space-md font-body-lg text-body-md lg:text-body-lg text-on-surface-variant max-w-lg">
+        Stop losing ROAS to boring edits. Book a quick discovery session and let’s engineer your highest-converting short-form campaign yet.
+      </p>
+<!-- Conversion Buttons Group -->
+<div class="mt-space-2xl flex flex-wrap items-center justify-center gap-space-md w-full max-w-xl"><a class="flex-1 min-w-[240px] inline-flex items-center justify-center gap-space-xs bg-primary-container text-on-primary-container font-label-lg text-label-lg uppercase font-bold px-space-xl py-space-md rounded-full shadow-[0_0_32px_rgba(195,244,0,0.35)] hover:scale-[1.02] transition-transform" href="https://wa.me/918978178134" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">chat</span>WhatsApp (+91 8978178134)</a><a class="inline-flex items-center justify-center gap-space-xs bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-lg text-label-lg uppercase font-bold px-space-lg py-space-md rounded-full transition-colors" href="tel:+918978178134"><span class="material-symbols-outlined text-[20px]">call</span>Call +91 8978178134</a><a class="inline-flex items-center justify-center gap-space-xs bg-surface-container-high hover:bg-surface-container-highest text-primary hover:text-primary-container font-label-lg text-label-lg uppercase font-semibold px-space-lg py-space-md rounded-full transition-colors" href="https://instagram.com/sudama_varma_7" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px] text-primary-container">video_camera_front</span>Instagram (@sudama_varma_7)</a></div>
+<!-- Direct Email Copy Capsule -->
+<a class="mt-space-xl inline-flex items-center gap-space-sm bg-surface-container/80 px-space-lg py-space-xs rounded-full cursor-pointer hover:bg-surface-container-high transition-colors text-primary hover:text-primary-container" href="mailto:chintalapatisudamavarma@gmail.com" id="email-pill"><span class="material-symbols-outlined text-primary-container text-[18px]">mail</span><span class="font-label-md text-label-md" id="email-address">chintalapatisudamavarma@gmail.com</span><span class="material-symbols-outlined text-on-surface-variant text-[16px] hover:text-primary" title="Email directly">send</span></a>
+<!-- Quick Toast Message (hidden by default) -->
+<div class="opacity-0 transition-opacity duration-300 font-label-sm text-label-sm text-primary-container mt-space-xs uppercase tracking-wider" id="copy-toast">
+        Email copied to clipboard!
+      </div>
+</div>
+</section>
+<!-- Interactive script for client-side behaviors -->
+<script>
+    document.getElementById('email-pill')?.addEventListener('click', function() {
+      const email = document.getElementById('email-address')?.innerText || 'hello@cutframe.studio';
+      navigator.clipboard.writeText(email).then(() => {
+        const toast = document.getElementById('copy-toast');
+        if (toast) {
+          toast.classList.remove('opacity-0');
+          toast.classList.add('opacity-100');
+          setTimeout(() => {
+            toast.classList.remove('opacity-100');
+            toast.classList.add('opacity-0');
+          }, 2000);
+        }
+      });
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest"><div class="max-w-max-width mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-3xl flex flex-col gap-space-2xl"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-xl"><div class="flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><img alt="CUTFRAME Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U42AzCTwGZet5z-1FCt7qZ90kuattnLfYQ3O-0bA1SE12gyUaDHz4LLxSw6O7a38g2fxIDyYY4UqMArbE2J0tW2_uLQG4-3eWvFV39n6-VdVq30vlwvZ_ahCCWek9umuGBQlVcehmQ3ixYlFJRNg9cc0WZyn1QPWIRD66osgbdqPOpLPhUh07D_vswVCUAHDNsJgfsLAJEHTcHY0b02Is4zdS4bLnto82Lt3jWnEz0dWVRDf7LevN8IsE"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">CUTFRAME</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">High-velocity short-form video editing and viral UGC creative direction for venture-backed DTC brands and top-tier creators.</p></div><div class="flex flex-wrap items-center gap-space-md"><a class="px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all font-label-sm text-label-sm tracking-wider uppercase flex items-center gap-space-2xs" href="https://instagram.com/sudama_varma_7" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">video_camera_front</span>sudama_varma_7</a><a class="px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all font-label-sm text-label-sm tracking-wider uppercase flex items-center gap-space-2xs" href="https://wa.me/918978178134" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">chat</span>+91 8978178134</a><a class="px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all font-label-sm text-label-sm tracking-wider uppercase flex items-center gap-space-2xs" href="tel:+918978178134"><span class="material-symbols-outlined text-[16px]">call</span>Call</a><a class="px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all font-label-sm text-label-sm tracking-wider uppercase flex items-center gap-space-2xs" href="mailto:chintalapatisudamavarma@gmail.com"><span class="material-symbols-outlined text-[16px]">mail</span>Email</a></div></div><div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-xl text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider"><div class="flex items-center gap-space-xs"><span class="">© 2024 CUTFRAME. ALL RIGHTS RESERVED.</span></div><div class="flex items-center gap-space-lg text-on-surface-variant"><span class="flex items-center gap-space-2xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>9:16 VERTICAL SPECIALIST</span><span class="hidden sm:inline">•</span><span class="">LOS ANGELES / REMOTE</span></div></div></div></footer>
+
+</body></html>
