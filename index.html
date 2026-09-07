@@ -622,24 +622,21 @@
         <!-- Category Filter Pills -->
         <div class="mt-space-lg flex flex-wrap items-center justify-center gap-space-xs bg-surface-container-low border border-white/5 p-1.5 rounded-full shadow-inner">
           <button class="filter-btn active px-space-md py-2 rounded-full bg-primary-container text-on-primary-container font-label-sm text-xs uppercase font-bold shadow-sm transition-all" data-category="all">
-            All (9)
+            All (4)
           </button>
           <button class="filter-btn px-space-md py-2 rounded-full hover:bg-surface-container-high text-on-surface-variant hover:text-primary font-label-sm text-xs uppercase font-semibold transition-all" data-category="ugc">
-            UGC Ads (3)
+            UGC Ads (2)
           </button>
           <button class="filter-btn px-space-md py-2 rounded-full hover:bg-surface-container-high text-on-surface-variant hover:text-primary font-label-sm text-xs uppercase font-semibold transition-all" data-category="brand">
-            Brand Promos (3)
-          </button>
-          <button class="filter-btn px-space-md py-2 rounded-full hover:bg-surface-container-high text-on-surface-variant hover:text-primary font-label-sm text-xs uppercase font-semibold transition-all" data-category="viral">
-            Viral Reels (3)
+            Brand Promos (2)
           </button>
         </div>
       </div>
 
-      <!-- 9:16 Vertical Grid: 3 columns on desktop, 2 on tablet, 1 on mobile -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="portfolio-grid">
+      <!-- 9:16 Vertical Grid: 4 columns on desktop, 2 on tablet, 1 on mobile -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg" id="portfolio-grid">
         
-        <!-- ==================== UGC ADS (3 SLOTS) ==================== -->
+        <!-- ==================== UGC ADS (2 UPLOADED VIDEOS) ==================== -->
         
         <!-- UGC Video 1 -->
         <div class="portfolio-card group relative aspect-[9/16] rounded-2xl overflow-hidden bg-surface-container-lowest border border-white/10 shadow-xl flex flex-col justify-between p-space-md cursor-pointer" data-category="ugc" onclick="openVideoModal('Athletic Greens UGC Ad', '2.4M views', '+380% CTR', 'Rapid problem-solution cut with kinetic animated b-roll punch-ins.', 'WHY YOUR PRODUCT ISN\'T SELLING', 'videos/ugc/ugc-1.mp4')">
@@ -701,37 +698,7 @@
           </div>
         </div>
 
-        <!-- UGC Video 3 -->
-        <div class="portfolio-card group relative aspect-[9/16] rounded-2xl overflow-hidden bg-surface-container-lowest border border-white/10 shadow-xl flex flex-col justify-between p-space-md cursor-pointer" data-category="ugc" onclick="openVideoModal('Peak Energy Drinks Ad', '3.8M views', '+420% ROAS', 'Pattern interrupt hook with viral TikTok audio mashup and rapid cut rate.', 'STOP WASTING MONEY ON ADS', 'videos/ugc/ugc-3.mp4')">
-          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMP6D3S2PpWySd6xYWfdipTr4kKrijxwN-VUrb1YPY7f0B4nUTjhRAouM4ZVfFN3rn7u-v1rE3rXOdfNfYUacu2YycbZkubIowV5HhSMkv_twbC7EcffVfyLNdAk8u4Jc_tmqaRYuKusIHqm-NIbQ0mD8JYFDjwFDOzatJsLr5Nk4o_gPiggPxifPJxPhjQOuGzVhc-gnBYBWd-mfxpE3YfNAmapqHq0hrNabCSYTts3eHuufXOW-7');"></div>
-          <div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/80 via-transparent to-surface-container-lowest/95 pointer-events-none"></div>
-          
-          <div class="relative z-10 flex items-center justify-between">
-            <span class="inline-flex items-center gap-1 font-label-sm text-xs bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-semibold border border-white/10">
-              <span class="material-symbols-outlined text-[15px] text-primary-container">visibility</span>
-              3.8M views
-            </span>
-            <span class="font-label-sm text-xs uppercase bg-primary-container text-on-primary-container font-extrabold px-2.5 py-1 rounded shadow">
-              UGC • +420% ROAS
-            </span>
-          </div>
-
-          <div class="relative z-10 self-center opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
-            <div class="w-16 h-16 rounded-full bg-primary-container/90 backdrop-blur-md flex items-center justify-center text-on-primary-container shadow-[0_0_30px_rgba(195,244,0,0.5)]">
-              <span class="material-symbols-outlined text-[36px] ml-1">play_arrow</span>
-            </div>
-          </div>
-
-          <div class="relative z-10 flex flex-col gap-2">
-            <span class="bg-surface-container-highest text-primary font-label-sm text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-fit">
-              “STOP WASTING MONEY ON ADS”
-            </span>
-            <h4 class="font-headline-sm text-xl font-bold text-primary">Peak Energy Drinks Ad</h4>
-            <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">Slot: videos/ugc/ugc-3.mp4 • Pattern interrupt hook with viral audio mashup.</p>
-          </div>
-        </div>
-
-        <!-- ==================== BRAND PROMOS (3 SLOTS) ==================== -->
+        <!-- ==================== BRAND PROMOS (2 UPLOADED VIDEOS) ==================== -->
 
         <!-- Brand Video 1 -->
         <div class="portfolio-card group relative aspect-[9/16] rounded-2xl overflow-hidden bg-surface-container-lowest border border-white/10 shadow-xl flex flex-col justify-between p-space-md cursor-pointer" data-category="brand" onclick="openVideoModal('Aura D\'Or Luxury Fragrance', '840K views', '+4.2x ROAS', 'Sensory macro liquid lighting, golden reflections, and high-converting commercial hook.', 'THE SCENT THAT CONVERTS', 'videos/brand/brand-1.mp4')">
@@ -790,128 +757,6 @@
             </span>
             <h4 class="font-headline-sm text-xl font-bold text-primary">Aether Chrono Smartwatch</h4>
             <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">Slot: videos/brand/brand-2.mp4 • Carbon fiber macro drops synced to bass.</p>
-          </div>
-        </div>
-
-        <!-- Brand Video 3 -->
-        <div class="portfolio-card group relative aspect-[9/16] rounded-2xl overflow-hidden bg-surface-container-lowest border border-white/10 shadow-xl flex flex-col justify-between p-space-md cursor-pointer" data-category="brand" onclick="openVideoModal('Zenith Apparel Commercial', '1.8M views', '+4.5x ROAS', 'Urban cinematic street style commercial with dynamic speed ramping.', 'UNLEASH YOUR FORM', 'videos/brand/brand-3.mp4')">
-          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXJ-FHd1LOqMsNBAf_BBolE5fh-tnD47hvSJTlPo5tRidwSlEmZnSS7vFXKJGbqkdWn2TUylKV5Jb5-lXfrtN9Jzw7-vLIbGzKt8GllefAhU4ct2p0CJnDi0Ph78tBoUedz6yvKtVPfZo0PhiKuMqjpHQMHGtXg8FJKuV_Kqb2gIV28id0mJlBQFwlVG20Hj4L7Yio8KvSmrE4mOof9W-WTlsDAqgySIy0mRy37XqzDiRwNoHDP7-q');"></div>
-          <div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/80 via-transparent to-surface-container-lowest/95"></div>
-          
-          <div class="relative z-10 flex items-center justify-between">
-            <span class="inline-flex items-center gap-1 font-label-sm text-xs bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-semibold border border-white/10">
-              <span class="material-symbols-outlined text-[15px] text-primary-container">visibility</span>
-              1.8M views
-            </span>
-            <span class="font-label-sm text-xs uppercase bg-secondary-container text-on-secondary-container font-extrabold px-2.5 py-1 rounded shadow">
-              Brand • +4.5x ROAS
-            </span>
-          </div>
-
-          <div class="relative z-10 self-center opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
-            <div class="w-16 h-16 rounded-full bg-primary-container/90 backdrop-blur-md flex items-center justify-center text-on-primary-container shadow-[0_0_30px_rgba(195,244,0,0.5)]">
-              <span class="material-symbols-outlined text-[36px] ml-1">play_arrow</span>
-            </div>
-          </div>
-
-          <div class="relative z-10 flex flex-col gap-2">
-            <span class="bg-surface-container-highest text-primary font-label-sm text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-fit">
-              “UNLEASH YOUR FORM”
-            </span>
-            <h4 class="font-headline-sm text-xl font-bold text-primary">Zenith Apparel Commercial</h4>
-            <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">Slot: videos/brand/brand-3.mp4 • Street style commercial with dynamic speed ramping.</p>
-          </div>
-        </div>
-
-        <!-- ==================== VIRAL REELS (3 SLOTS) ==================== -->
-
-        <!-- Viral Video 1 -->
-        <div class="portfolio-card group relative aspect-[9/16] rounded-2xl overflow-hidden bg-surface-container-lowest border border-white/10 shadow-xl flex flex-col justify-between p-space-md cursor-pointer" data-category="viral" onclick="openVideoModal('Fintech App Launch Viral Reel', '950K views', '78% Retention', 'Slick kinetic typography callouts and clean mobile UI screen captures.', 'UNBOXING THE ULTIMATE TECH GEAR', 'videos/viral/viral-1.mp4')">
-          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDo0rF1dLFhwCE1oP5MG_JwFVBNsWUurYzXm4w1T3_BxUUEeurPPTj_26DqV-EZThEE3ADBhw6lEoQLAo4INrSQtRz_7vQMbr1KDIQJv5YM8jkVABsSoRnhk1hC71S8B1qP0ThsoECyIDNOy5CRqGrBZO8Lag0bcqJQIuuac6dE6hmkURCpqWWwF26GfMp94hi6eCZ9fyJHW-JF3RncP9Cp-hnZSsyWoL8CEt25T5efE-YHTILRG3Px');"></div>
-          <div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/80 via-transparent to-surface-container-lowest/95"></div>
-          
-          <div class="relative z-10 flex items-center justify-between">
-            <span class="inline-flex items-center gap-1 font-label-sm text-xs bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-semibold border border-white/10">
-              <span class="material-symbols-outlined text-[15px] text-primary-container">visibility</span>
-              950K views
-            </span>
-            <span class="font-label-sm text-xs uppercase bg-secondary-container text-on-secondary-container font-extrabold px-2.5 py-1 rounded shadow">
-              Viral • 78% Retention
-            </span>
-          </div>
-
-          <div class="relative z-10 self-center opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
-            <div class="w-16 h-16 rounded-full bg-primary-container/90 backdrop-blur-md flex items-center justify-center text-on-primary-container shadow-[0_0_30px_rgba(195,244,0,0.5)]">
-              <span class="material-symbols-outlined text-[36px] ml-1">play_arrow</span>
-            </div>
-          </div>
-
-          <div class="relative z-10 flex flex-col gap-2">
-            <span class="bg-primary-container/90 text-on-primary-container font-label-sm text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-fit">
-              “UNBOXING THE ULTIMATE TECH GEAR”
-            </span>
-            <h4 class="font-headline-sm text-xl font-bold text-primary">Fintech App Launch Reel</h4>
-            <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">Slot: videos/viral/viral-1.mp4 • Slick kinetic typography callouts and UI captures.</p>
-          </div>
-        </div>
-
-        <!-- Viral Video 2 -->
-        <div class="portfolio-card group relative aspect-[9/16] rounded-2xl overflow-hidden bg-surface-container-lowest border border-white/10 shadow-xl flex flex-col justify-between p-space-md cursor-pointer" data-category="viral" onclick="openVideoModal('Podcast Viral Punch-In Clip', '1.6M views', '85% Retention', 'High-energy podcast interview clipping with dynamic subtitles and sound effects.', 'HOW BILLIONAIRES THINK', 'videos/viral/viral-2.mp4')">
-          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuARgY2_BgCnzFWmRaJl4kvjpz6JI12lE4Wq9JVJJhoFlacW3drWCyRI-5WKiW8by48jJcxW9BHXumV_IAhU9mhU_6ocl7g80D9YSkzcjxl-7uPApUlvJJ7fKD9Ts0WxnXKqG2xyqoLK5TQLp0cY6N0QD2kE1kPInUAmyp-wtnJtsmm1eb56ekXLD9erV_qQ5vmzhXwNS-oHgZ39lVVOWKE8-EBjJsoWLcreQrZfUMumPomfxfgBf8eT');"></div>
-          <div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/80 via-transparent to-surface-container-lowest/95"></div>
-          
-          <div class="relative z-10 flex items-center justify-between">
-            <span class="inline-flex items-center gap-1 font-label-sm text-xs bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-semibold border border-white/10">
-              <span class="material-symbols-outlined text-[15px] text-primary-container">visibility</span>
-              1.6M views
-            </span>
-            <span class="font-label-sm text-xs uppercase bg-primary-container text-on-primary-container font-extrabold px-2.5 py-1 rounded shadow">
-              Viral • 85% Retention
-            </span>
-          </div>
-
-          <div class="relative z-10 self-center opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
-            <div class="w-16 h-16 rounded-full bg-primary-container/90 backdrop-blur-md flex items-center justify-center text-on-primary-container shadow-[0_0_30px_rgba(195,244,0,0.5)]">
-              <span class="material-symbols-outlined text-[36px] ml-1">play_arrow</span>
-            </div>
-          </div>
-
-          <div class="relative z-10 flex flex-col gap-2">
-            <span class="bg-surface-container-highest text-primary font-label-sm text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-fit">
-              “HOW BILLIONAIRES THINK”
-            </span>
-            <h4 class="font-headline-sm text-xl font-bold text-primary">Podcast Viral Punch-In Clip</h4>
-            <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">Slot: videos/viral/viral-2.mp4 • High-energy interview clip with kinetic subtitles.</p>
-          </div>
-        </div>
-
-        <!-- Viral Video 3 -->
-        <div class="portfolio-card group relative aspect-[9/16] rounded-2xl overflow-hidden bg-surface-container-lowest border border-white/10 shadow-xl flex flex-col justify-between p-space-md cursor-pointer" data-category="viral" onclick="openVideoModal('Creator POV Viral Story', '2.9M views', '91% Retention', 'Fast-paced storytelling edit with trending sound design and visual meme overlays.', 'THE DAY EVERYTHING CHANGED', 'videos/viral/viral-3.mp4')">
-          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtxEYTMBF1AL-iYV7dSuvTxLWPQOYvCdX7nfd4l8Zcg88G-4C5jCjktxV3RgvyEzcxRvemkXEckSbhoD_v17_oZvAoytTe-OPolyj4YWQC6meglhPBKhM_Gxo5_RSVFIzgHVF75dZDS0qbINo8ra_jMf2I6pxlAgySunWFJhdcbSKQjmriDWYKl64exjGl62Lw_BpQEFT3RiRlH0NdTIl-0EF5ISxPw3stFgJrukWa5FcusUy5MoWa');"></div>
-          <div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/80 via-transparent to-surface-container-lowest/95"></div>
-          
-          <div class="relative z-10 flex items-center justify-between">
-            <span class="inline-flex items-center gap-1 font-label-sm text-xs bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-semibold border border-white/10">
-              <span class="material-symbols-outlined text-[15px] text-primary-container">visibility</span>
-              2.9M views
-            </span>
-            <span class="font-label-sm text-xs uppercase bg-secondary-container text-on-secondary-container font-extrabold px-2.5 py-1 rounded shadow">
-              Viral • 91% Retention
-            </span>
-          </div>
-
-          <div class="relative z-10 self-center opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
-            <div class="w-16 h-16 rounded-full bg-primary-container/90 backdrop-blur-md flex items-center justify-center text-on-primary-container shadow-[0_0_30px_rgba(195,244,0,0.5)]">
-              <span class="material-symbols-outlined text-[36px] ml-1">play_arrow</span>
-            </div>
-          </div>
-
-          <div class="relative z-10 flex flex-col gap-2">
-            <span class="bg-primary-container/90 text-on-primary-container font-label-sm text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-fit">
-              “THE DAY EVERYTHING CHANGED”
-            </span>
-            <h4 class="font-headline-sm text-xl font-bold text-primary">Creator POV Viral Story</h4>
-            <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">Slot: videos/viral/viral-3.mp4 • Fast-paced storytelling with sound design.</p>
           </div>
         </div>
 
