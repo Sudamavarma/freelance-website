@@ -338,89 +338,137 @@
 
       </div>
 
-      <!-- Featured Interactive Showreel Frame -->
-      <div class="mt-space-3xl w-full max-w-5xl rounded-2xl overflow-hidden bg-surface-container-lowest border border-white/10 shadow-2xl relative group" id="main-showreel-container">
+      <!-- Featured Interactive 9:16 Vertical Showreel Frame -->
+      <div class="mt-space-3xl w-full flex flex-col lg:flex-row items-center justify-center gap-space-xl relative" id="hero-showcase-wrapper">
         
-        <!-- Video Canvas / Native Video Player -->
-        <div class="w-full aspect-[16/9] relative overflow-hidden bg-[#0c0c0e]" id="showreel-viewport">
-          <video 
-            id="hero-main-video" 
-            src="videos/ugc/ugc-1.mp4" 
-            playsinline 
-            preload="auto"
-            loop
-            autoplay
-            muted
-            class="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-transform duration-700"
-          ></video>
-          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-surface-container-lowest/30 pointer-events-none"></div>
+        <!-- Ambient Glow Aura behind phone -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] sm:w-[500px] h-[600px] bg-primary-container/15 blur-[120px] pointer-events-none rounded-full -z-10"></div>
+
+        <!-- Left Side Floating Feature Callouts (Desktop) -->
+        <div class="hidden lg:flex flex-col gap-space-lg w-64 shrink-0">
+          <div class="glass-card p-space-md rounded-2xl border border-white/10 hover:border-primary-container/30 transition-all flex flex-col gap-1.5 shadow-xl animate-float-slow">
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-8 rounded-lg bg-primary-container/10 border border-primary-container/20 flex items-center justify-center text-primary-container">
+                <span class="material-symbols-outlined text-[18px]">bolt</span>
+              </span>
+              <span class="font-headline-sm text-sm font-bold text-primary">3s Hook Master</span>
+            </div>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+              Engineered pattern interrupts stop the thumb and boost watch-through rate by +48%.
+            </p>
+          </div>
+
+          <div class="glass-card p-space-md rounded-2xl border border-white/10 hover:border-secondary-container/30 transition-all flex flex-col gap-1.5 shadow-xl">
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-8 rounded-lg bg-secondary-container/10 border border-secondary-container/20 flex items-center justify-center text-secondary-container">
+                <span class="material-symbols-outlined text-[18px]">graphic_eq</span>
+              </span>
+              <span class="font-headline-sm text-sm font-bold text-primary">Dynamic Sound FX</span>
+            </div>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+              Bespoke whooshes, riser impacts, and licensed trending TikTok/Reels audio.
+            </p>
+          </div>
         </div>
 
-        <!-- Video Control Deck Overlay -->
-        <div class="absolute inset-0 flex flex-col justify-between p-space-md lg:p-space-lg pointer-events-none">
+        <!-- 9:16 Vertical Video Frame (Full Video Visible) -->
+        <div class="w-full max-w-[360px] sm:max-w-[400px] md:max-w-[430px] aspect-[9/16] rounded-[2.5rem] overflow-hidden bg-surface-container-lowest border-2 border-white/15 shadow-[0_0_80px_rgba(195,244,0,0.18)] relative group shrink-0" id="main-showreel-container">
           
-          <!-- Top Track Header -->
-          <div class="flex items-center justify-between w-full">
-            <div class="inline-flex items-center gap-space-xs bg-surface-container-lowest/90 border border-white/10 backdrop-blur-md px-space-sm py-1.5 rounded-full pointer-events-auto shadow-lg">
-              <span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
-              <span class="font-label-sm text-xs uppercase tracking-wider font-bold text-primary">Now Playing: UGC Ad Creative 1 (ugc-1.mp4)</span>
-            </div>
-            <div class="inline-flex items-center gap-space-xs">
-              <button id="hero-sound-pill" class="inline-flex items-center gap-1.5 bg-primary-container text-on-primary-container hover:bg-white text-xs font-label-sm font-bold uppercase px-3.5 py-1.5 rounded-full shadow-[0_0_20px_rgba(195,244,0,0.4)] pointer-events-auto transition-all transform hover:scale-105">
-                <span class="material-symbols-outlined text-[16px]" id="hero-sound-pill-icon">volume_off</span>
-                <span id="hero-sound-pill-text">Sound: Muted (Click for Audio)</span>
+          <!-- Native HTML5 Video Element (9:16 ratio) -->
+          <div class="w-full h-full relative overflow-hidden bg-[#0a0a0c]" id="showreel-viewport">
+            <video 
+              id="hero-main-video" 
+              src="videos/ugc/ugc-1.mp4" 
+              playsinline 
+              preload="auto"
+              loop
+              autoplay
+              muted
+              class="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-transform duration-700"
+            ></video>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-surface-container-lowest/40 pointer-events-none"></div>
+          </div>
+
+          <!-- Video Control Deck Overlay -->
+          <div class="absolute inset-0 flex flex-col justify-between p-space-md pointer-events-none">
+            
+            <!-- Top Track Header -->
+            <div class="flex items-center justify-between w-full">
+              <div class="inline-flex items-center gap-1.5 bg-surface-container-lowest/90 border border-white/10 backdrop-blur-md px-3 py-1 rounded-full pointer-events-auto shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+                <span class="font-label-sm text-[11px] uppercase tracking-wider font-bold text-primary">9:16 UGC Showreel</span>
+              </div>
+              
+              <button id="hero-sound-pill" class="inline-flex items-center gap-1 bg-primary-container text-on-primary-container hover:bg-white text-[11px] font-label-sm font-bold uppercase px-3 py-1 rounded-full shadow-[0_0_20px_rgba(195,244,0,0.4)] pointer-events-auto transition-all transform hover:scale-105">
+                <span class="material-symbols-outlined text-[15px]" id="hero-sound-pill-icon">volume_off</span>
+                <span id="hero-sound-pill-text">Sound: Muted</span>
               </button>
-              <span class="hidden sm:inline-flex font-label-sm text-[11px] font-bold uppercase bg-surface-container-high/90 text-primary-container px-2.5 py-1 rounded border border-primary-container/20">4K 60FPS</span>
             </div>
-          </div>
 
-          <!-- Center Play Trigger -->
-          <div class="self-center pointer-events-auto cursor-pointer group-hover:scale-110 transition-transform duration-300" id="showreel-center-play">
-            <div class="w-20 h-20 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_50px_rgba(195,244,0,0.6)] hover:bg-white transition-all">
-              <span class="material-symbols-outlined text-[44px] ml-1" id="center-play-icon">play_arrow</span>
-            </div>
-          </div>
-
-          <!-- Bottom Transport Bar -->
-          <div class="w-full flex flex-col gap-space-xs bg-surface-container-lowest/90 border border-white/10 backdrop-blur-xl p-space-sm rounded-xl pointer-events-auto shadow-2xl">
-            <!-- Timeline scrubber bar -->
-            <div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden cursor-pointer relative" id="timeline-scrubber">
-              <div class="h-full bg-primary-container w-[45%] relative transition-all" id="scrubber-progress">
-                <span class="absolute right-0 top-1/2 -translate-y-1/2 w-3.5 h-3.5 bg-white rounded-full shadow-md border-2 border-primary-container"></span>
+            <!-- Center Play Trigger -->
+            <div class="self-center pointer-events-auto cursor-pointer group-hover:scale-110 transition-transform duration-300" id="showreel-center-play">
+              <div class="w-16 h-16 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_40px_rgba(195,244,0,0.6)] hover:bg-white transition-all">
+                <span class="material-symbols-outlined text-[38px] ml-1" id="center-play-icon">play_arrow</span>
               </div>
             </div>
 
-            <div class="flex items-center justify-between pt-1">
-              <div class="flex items-center gap-space-md">
-                <button id="transport-play-btn" class="text-primary hover:text-primary-container transition-colors flex items-center">
-                  <span class="material-symbols-outlined text-[24px]" id="transport-play-icon">play_arrow</span>
-                </button>
-                <span class="font-label-sm text-xs text-primary font-mono" id="time-display">01:12 / 02:40</span>
-                
-                <!-- Mini Graphic Equalizer Wave -->
-                <div class="hidden sm:flex items-end gap-1 h-4">
-                  <span class="w-1 bg-primary-container rounded-full animate-eq-1"></span>
-                  <span class="w-1 bg-primary-container rounded-full animate-eq-2"></span>
-                  <span class="w-1 bg-primary-container rounded-full animate-eq-3"></span>
-                  <span class="w-1 bg-primary-container rounded-full animate-eq-4"></span>
-                  <span class="w-1 bg-primary-container rounded-full animate-eq-5"></span>
+            <!-- Bottom Transport Bar -->
+            <div class="w-full flex flex-col gap-1.5 bg-surface-container-lowest/95 border border-white/10 backdrop-blur-xl p-3 rounded-2xl pointer-events-auto shadow-2xl">
+              <!-- Timeline scrubber bar -->
+              <div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden cursor-pointer relative" id="timeline-scrubber">
+                <div class="h-full bg-primary-container w-[35%] relative transition-all" id="scrubber-progress">
+                  <span class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full shadow-md border border-primary-container"></span>
                 </div>
               </div>
 
-              <div class="flex items-center gap-space-md text-on-surface-variant">
-                <button id="vol-btn" class="hover:text-primary-container transition-colors flex items-center" title="Mute/Unmute">
-                  <span class="material-symbols-outlined text-[20px]" id="vol-icon">volume_up</span>
-                </button>
-                <button onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})" class="hover:text-primary-container text-xs uppercase font-label-sm font-semibold tracking-wider transition-colors hidden sm:block">
-                  Browse All Clips ↓
-                </button>
-                <button id="fullscreen-btn" class="hover:text-primary-container transition-colors flex items-center" title="Fullscreen">
-                  <span class="material-symbols-outlined text-[20px]">fullscreen</span>
-                </button>
+              <div class="flex items-center justify-between pt-0.5">
+                <div class="flex items-center gap-2">
+                  <button id="transport-play-btn" class="text-primary hover:text-primary-container transition-colors flex items-center">
+                    <span class="material-symbols-outlined text-[20px]" id="transport-play-icon">play_arrow</span>
+                  </button>
+                  <span class="font-label-sm text-[11px] text-primary font-mono" id="time-display">00:00 / 00:00</span>
+                </div>
+
+                <div class="flex items-center gap-2 text-on-surface-variant">
+                  <button id="vol-btn" class="hover:text-primary-container transition-colors flex items-center" title="Mute/Unmute">
+                    <span class="material-symbols-outlined text-[18px]" id="vol-icon">volume_up</span>
+                  </button>
+                  <button id="fullscreen-btn" class="hover:text-primary-container transition-colors flex items-center" title="Fullscreen">
+                    <span class="material-symbols-outlined text-[18px]">fullscreen</span>
+                  </button>
+                </div>
               </div>
             </div>
+
           </div>
 
+        </div>
+
+        <!-- Right Side Floating Feature Callouts (Desktop) -->
+        <div class="hidden lg:flex flex-col gap-space-lg w-64 shrink-0">
+          <div class="glass-card p-space-md rounded-2xl border border-white/10 hover:border-primary-container/30 transition-all flex flex-col gap-1.5 shadow-xl">
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-8 rounded-lg bg-primary-container/10 border border-primary-container/20 flex items-center justify-center text-primary-container">
+                <span class="material-symbols-outlined text-[18px]">trending_up</span>
+              </span>
+              <span class="font-headline-sm text-sm font-bold text-primary">3.4x ROAS Lift</span>
+            </div>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+              Every cut is structured with direct-response triggers and frictionless call-to-actions.
+            </p>
+          </div>
+
+          <div class="glass-card p-space-md rounded-2xl border border-white/10 hover:border-secondary-container/30 transition-all flex flex-col gap-1.5 shadow-xl animate-float-slow" style="animation-delay: 1.5s;">
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-8 rounded-lg bg-secondary-container/10 border border-secondary-container/20 flex items-center justify-center text-secondary-container">
+                <span class="material-symbols-outlined text-[18px]">verified</span>
+              </span>
+              <span class="font-headline-sm text-sm font-bold text-primary">48h First Cut</span>
+            </div>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+              Rapid turnaround on Frame.io with unlimited timestamped revision rounds.
+            </p>
+          </div>
         </div>
 
       </div>
